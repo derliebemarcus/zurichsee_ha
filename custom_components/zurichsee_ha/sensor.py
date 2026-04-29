@@ -146,8 +146,8 @@ SENSOR_DESCRIPTIONS: tuple[ZurichseeSensorEntityDescription, ...] = (
 )
 
 
-async def async_setup_entry(
-    hass: HomeAssistant,
+def async_setup_entry(
+    _hass: HomeAssistant,
     entry: ConfigEntry,
     async_add_entities: AddEntitiesCallback,
 ) -> None:
