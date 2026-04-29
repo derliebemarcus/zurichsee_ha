@@ -5,14 +5,14 @@ from datetime import datetime
 from custom_components.zurichsee_ha.models import MeasurementData, MeasurementResponse
 
 
-def test_measurement_data_instantiation():
+def test_measurement_data_instantiation() -> None:
     """Test MeasurementData model."""
     data = MeasurementData(air_temperature=15.5, timestamp_cet=datetime.now())
     assert data.air_temperature == 15.5
     assert isinstance(data.timestamp_cet, datetime)
 
 
-def test_measurement_response_parsing():
+def test_measurement_response_parsing() -> None:
     """Test parsing of API response envelope."""
     data = {
         "ok": True,

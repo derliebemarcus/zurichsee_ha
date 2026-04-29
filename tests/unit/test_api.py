@@ -11,7 +11,7 @@ from custom_components.zurichsee_ha.exceptions import ZurichseeApiError
 
 
 @pytest.mark.asyncio
-async def test_async_get_measurements_success():
+async def test_async_get_measurements_success() -> None:
     """Test successful data retrieval."""
     with open("tests/fixtures/mythenquai.json") as f:
         mock_data = json.load(f)
@@ -34,7 +34,7 @@ async def test_async_get_measurements_success():
 
 
 @pytest.mark.asyncio
-async def test_async_get_measurements_error():
+async def test_async_get_measurements_error() -> None:
     """Test API error handling."""
     with aioresponses() as m:
         m.get(
@@ -49,7 +49,7 @@ async def test_async_get_measurements_error():
 
 
 @pytest.mark.asyncio
-async def test_async_validate_connection():
+async def test_async_validate_connection() -> None:
     """Test connection validation."""
     with open("tests/fixtures/mythenquai.json") as f:
         mock_data = json.load(f)
