@@ -11,4 +11,4 @@ mypy>=1.20.2
 mutmut>=3.0.0
 pip-audit>=2.7.0
 types-pyyaml>=6.0.12.20260408
-pip-tools>=7.0.0
+pip-tools>=7.5.3
