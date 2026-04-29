@@ -50,7 +50,7 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         # Clean up runtime data if needed
         pass
 
-    return unload_ok
+    return unload_ok  # type: ignore[no-any-return]
 
 
 async def async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
