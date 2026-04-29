@@ -129,6 +129,8 @@ jobs:
           path: coverage.xml
 
       - name: Upload coverage to Coveralls
+        env:
+          OPENSSL_CONF: /dev/null
         uses: coverallsapp/github-action@v2
         with:
           format: cobertura
