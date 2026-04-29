@@ -5,9 +5,8 @@ from __future__ import annotations
 from typing import Any
 
 import voluptuous as vol
-from homeassistant import config_entries
+from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
 from homeassistant.core import callback
-from homeassistant.data_entry_flow import FlowResult
 
 from .const import (
     CONF_STATIONS,
@@ -19,12 +18,12 @@ from .const import (
 )
 
 
-class ZurichseeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
+class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Zurichsee Wetterstationen."""
 
     VERSION = 1
 
-    async def async_step_user(self, user_input: dict[str, Any] | None = None) -> FlowResult:
+    async def async_step_user(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         """Handle the initial step."""
         if self._async_current_entries():
             return self.async_abort(reason="single_instance_allowed")
@@ -57,20 +56,20 @@ class ZurichseeConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
     @staticmethod
     @callback
     def async_get_options_flow(
-        config_entry: config_entries.ConfigEntry,
+        config_entry: ConfigEntry,
     ) -> ZurichseeOptionsFlowHandler:
         """Get the options flow for this handler."""
         return ZurichseeOptionsFlowHandler(config_entry)
 
 
-class ZurichseeOptionsFlowHandler(config_entries.OptionsFlow):
+class ZurichseeOptionsFlowHandler(OptionsFlow):
     """Handle options flow for Zurichsee Wetterstationen."""
 
-    def __init__(self, config_entry: config_entries.ConfigEntry) -> None:
+    def __init__(self, config_entry: ConfigEntry) -> None:
         """Initialize options flow."""
         self.config_entry = config_entry
 
-    async def async_step_init(self, user_input: dict[str, Any] | None = None) -> FlowResult:
+    async def async_step_init(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         """Manage the options."""
         if user_input is not None:
             return self.async_create_entry(title="", data=user_input)

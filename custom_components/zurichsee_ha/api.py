@@ -27,13 +27,15 @@ class ZurichseeApiClient:
     async def async_get_measurements(self, station: str) -> MeasurementData | None:
         """Fetch the latest measurement for a specific station."""
         url = self._base_url / "measurements" / station
-        params = {
+        params: dict[str, Any] = {
             "limit": 1,
             "sort": "timestamp_cet desc",
         }
 
         try:
-            async with self._session.get(url, params=params, timeout=20) as response:
+            async with self._session.get(
+                url, params=params, timeout=aiohttp.ClientTimeout(total=20)
+            ) as response:
                 if response.status != 200:
                     raise ZurichseeApiError(
                         f"Failed to fetch data from {station}: {response.status}"
