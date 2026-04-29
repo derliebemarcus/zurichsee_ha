@@ -125,7 +125,7 @@ jobs:
 
   sonarqube:
     runs-on: [self-hosted, linux, X64]
-    needs: [tests]
+    needs: [test-coverage]
     steps:
       - uses: actions/checkout@v6
         with:
