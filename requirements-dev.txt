@@ -1,13 +1,13 @@
 -r requirements.txt
-pytest==8.4.2
-pytest-asyncio==0.23.8
-pytest-cov==7.1.0
-pytest-homeassistant-custom-component==0.13.316
-aioresponses==0.7.6
-syrupy==5.1.0
-ruff==0.15.10
-mypy==1.20.0
-mutmut==3.5.0
-pip-audit==2.7.3
-types-pyyaml==6.0.12.20260408
-pip-tools==7.5.3
+pytest>=8.4.2,<10
+pytest-cov>=6,<8
+ruff>=0.11,<1
+mypy>=1.11,<2
+mutmut>=3,<4
+types-PyYAML>=6,<7
+pytest-asyncio<0.24,>=0.23
+syrupy>=4.0
+pip-tools
+pytest-homeassistant-custom-component>=0.13.12
+aioresponses>=0.7.0
+pip-audit>=2.7.0
