@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/derliebemarcus/zurichsee_ha/main/custom_components/zurichsee_ha/icon.png" alt="Zürichsee Wetterstationen Logo" width="200">
+  <img src="https://raw.githubusercontent.com/derliebemarcus/zurichsee_ha/refs/heads/main/custom_components/zurichsee_ha/brand/logo.png" alt="Zürichsee Wetterstationen Logo" width="200">
 </p>
 
 # Zürichsee Wetterstationen for Home Assistant
