@@ -8,6 +8,7 @@
 [![CI](https://github.com/derliebemarcus/zurichsee_ha/actions/workflows/ci.yml/badge.svg)](https://github.com/derliebemarcus/zurichsee_ha/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/derliebemarcus/zurichsee_ha)](LICENSE)
 [![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
+[![Coverage Status](https://img.shields.io/coverallsCoverage/github/derliebemarcus/zurichsee_ha?branch=main&style=for-the-badge)](https://coveralls.io/github/derliebemarcus/zurichsee_ha)
 
 Home Assistant custom integration for weather stations of the Wasserschutzpolizei Zurich (tecdottir API).
 
