@@ -3,17 +3,18 @@
 from collections.abc import Generator
 from unittest.mock import AsyncMock, patch
 
+from typing import Any
 import pytest
 
 
 @pytest.fixture(autouse=True)
-def auto_enable_custom_integrations(enable_custom_integrations):
+def auto_enable_custom_integrations(enable_custom_integrations: Any) -> Generator[None, None, None]:
     """Enable custom integrations in Home Assistant."""
     yield
 
 
 @pytest.fixture
-def mock_setup_entry() -> Generator[AsyncMock]:
+def mock_setup_entry() -> Generator[AsyncMock, None, None]:
     """Override setup_entry."""
     with patch(
         "custom_components.zurichsee_ha.async_setup_entry", return_value=True
@@ -22,7 +23,7 @@ def mock_setup_entry() -> Generator[AsyncMock]:
 
 
 @pytest.fixture
-def mock_api_client():
+def mock_api_client() -> Generator[AsyncMock, None, None]:
     """Mock API client."""
     with patch("custom_components.zurichsee_ha.api.ZurichseeApiClient", autospec=True) as mock_api:
         instance = mock_api.return_value

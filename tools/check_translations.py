@@ -6,7 +6,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-from typing import Any
+from typing import Any, cast
 
 ROOT = Path(__file__).resolve().parent.parent
 INTEGRATION_DIR = ROOT / "custom_components" / "zurichsee_ha"
@@ -32,7 +32,7 @@ def _flatten(node: Any, prefix: str = "") -> dict[str, Any]:
 
 
 def _load_json(path: Path) -> dict[str, Any]:
-    return json.loads(path.read_text(encoding="utf-8"))
+    return cast(dict[str, Any], json.loads(path.read_text(encoding="utf-8")))
 
 
 def main() -> int:
