@@ -43,6 +43,7 @@ async def test_options_flow(hass: HomeAssistant) -> None:
 
     # Verify that async_reload_entry is called (coverage for __init__.py:58)
     from custom_components.zurichsee_ha import async_reload_entry
+
     with patch("homeassistant.config_entries.ConfigEntries.async_reload") as mock_reload:
         await async_reload_entry(hass, entry)
         mock_reload.assert_called_once_with(entry.entry_id)

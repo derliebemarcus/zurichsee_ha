@@ -1,7 +1,6 @@
 """Tests for Zurichsee API client."""
 
 import json
-from unittest.mock import patch
 
 import aiohttp
 import pytest
@@ -66,6 +65,8 @@ async def test_async_validate_connection() -> None:
             client = ZurichseeApiClient(session)
             # Should not raise
             await client.async_validate_connection()
+
+
 @pytest.mark.asyncio
 async def test_async_get_measurements_empty_result() -> None:
     """Test handling of empty results."""
@@ -91,9 +92,7 @@ async def test_async_get_measurements_missing_keys() -> None:
             {
                 "station": "mythenquai",
                 "timestamp": "2026-04-29T10:00:00Z",
-                "values": {
-                    "air_temperature": {"value": 15.0, "unit": "°C"}
-                }
+                "values": {"air_temperature": {"value": 15.0, "unit": "°C"}},
             }
         ]
     }

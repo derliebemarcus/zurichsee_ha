@@ -52,6 +52,7 @@ async def test_sensors(hass: HomeAssistant) -> None:
         assert state is not None
         assert state.state == "11.2"
 
+
 @pytest.mark.asyncio
 async def test_sensor_missing_data(hass: HomeAssistant) -> None:
     """Test sensor behavior when data is missing."""
