@@ -1,5 +1,5 @@
 {
-  "name": "Zürichsee Wetterstationen",
+  "name": "Zurichsee Wetterstationen",
   "iot_class": "cloud_polling",
   "render_readme": true
 }
