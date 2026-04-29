@@ -5,7 +5,7 @@ setup:
 	@python3 -m venv .venv
 	@.venv/bin/python3 -m pip install --upgrade pip setuptools wheel
 	@.venv/bin/python3 -m pip install -c constraints.txt pytest
-	@.venv/bin/python3 -m pip install --no-deps pytest-homeassistant-custom-component
+	@.venv/bin/python3 -m pip install --no-deps pytest-homeassistant-custom-component -c constraints.txt
 	@.venv/bin/python3 -m pip install -r requirements-dev.txt -c constraints.txt --ignore-installed pytest
 	@chmod +x tools/install_git_hooks.sh
 	@tools/install_git_hooks.sh
