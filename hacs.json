@@ -1,8 +1,10 @@
 {
   "name": "Zürichsee Wetterstationen",
+  "category": "integration",
   "country": [
     "CH"
   ],
   "homeassistant": "2024.4.0",
-  "render_readme": true
+  "render_readme": true,
+  "zip_release": true
 }
