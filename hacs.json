@@ -1,7 +1,5 @@
 {
   "name": "Zurichsee",
-  "domains": ["zurichsee_ha"],
-  "iot_class": "cloud_polling",
-  "render_readme": true,
-  "homeassistant": "2026.3.0"
+  "homeassistant": "2026.3.0",
+  "render_readme": true
 }
