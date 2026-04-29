@@ -5,6 +5,7 @@ from __future__ import annotations
 from typing import Any
 
 import voluptuous as vol
+
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
 from homeassistant.core import callback
 from homeassistant.helpers.selector import (
@@ -22,7 +23,6 @@ from .const import (
     STATION_NAMES,
     UPDATE_INTERVAL_OPTIONS,
 )
-
 
 
 class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
