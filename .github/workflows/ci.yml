@@ -115,7 +115,7 @@ jobs:
           python -m pytest \
             tests/unit \
             tests/ha \
-            --cov=. \
+            --cov=custom_components/zurichsee_ha \
             --cov-config=.coveragerc \
             --cov-report=xml:coverage.xml \
             --cov-report=term-missing

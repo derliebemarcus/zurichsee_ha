@@ -24,7 +24,7 @@ from .const import (
 )
 
 
-class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call-arg]
+class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
     """Handle a config flow for Zurichsee Wetterstationen."""
 
     VERSION = 1
@@ -72,7 +72,7 @@ class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):  # type: ignore[call-arg]
         return self.async_show_form(step_id="user", data_schema=data_schema)
 
     @staticmethod
-    @callback  # type: ignore[untyped-decorator]
+    @callback
     def async_get_options_flow(
         config_entry: ConfigEntry,
     ) -> ZurichseeOptionsFlowHandler:
