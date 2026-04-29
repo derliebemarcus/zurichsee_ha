@@ -1,8 +1,5 @@
 name: Continuous Integration
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   push:
     branches:
@@ -129,6 +126,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
+          format: cobertura
           path: coverage.xml
 
       - name: Upload coverage to Coveralls
