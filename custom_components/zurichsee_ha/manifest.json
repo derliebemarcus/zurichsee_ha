@@ -1,0 +1,19 @@
+{
+  "domain": "zurichsee_ha",
+  "name": "Zürichsee Wetterstationen",
+  "codeowners": [
+    "@marcus"
+  ],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/derliebemarcus/zurichsee_ha",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/derliebemarcus/zurichsee_ha/issues",
+  "loggers": [
+    "custom_components.zurichsee_ha"
+  ],
+  "quality_scale": "silver",
+  "requirements": [],
+  "version": "0.1.0"
+}

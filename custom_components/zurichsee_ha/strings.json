@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Zürichsee Wetterstationen",
+        "description": "Configure the weather stations at Lake Zurich.",
+        "data": {
+          "stations": "Stations",
+          "update_interval": "Update Interval"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Only a single instance is allowed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "stations": "Stations",
+          "update_interval": "Update Interval"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "air_temperature": {
+        "name": "Air temperature"
+      },
+      "water_temperature": {
+        "name": "Water temperature"
+      },
+      "wind_speed_avg_10min": {
+        "name": "Wind speed (10 min avg)"
+      },
+      "wind_gust_max_10min": {
+        "name": "Wind gust (10 min max)"
+      },
+      "wind_direction": {
+        "name": "Wind direction"
+      },
+      "wind_force_avg_10min": {
+        "name": "Wind force (10 min avg)"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "dew_point": {
+        "name": "Dew point"
+      },
+      "barometric_pressure_qfe": {
+        "name": "Barometric pressure (QFE)"
+      },
+      "barometric_pressure_qff": {
+        "name": "Barometric pressure (QFF)"
+      },
+      "barometric_pressure_qnh": {
+        "name": "Barometric pressure (QNH)"
+      },
+      "precipitation_mm": {
+        "name": "Precipitation"
+      },
+      "precipitation_type": {
+        "name": "Precipitation type"
+      },
+      "global_radiation": {
+        "name": "Global radiation"
+      },
+      "timestamp_cet": {
+        "name": "Last update"
+      }
+    }
+  }
+}

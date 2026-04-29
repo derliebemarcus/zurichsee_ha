@@ -1,0 +1,77 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Zürichsee Wetterstationen",
+        "description": "Konfiguriere die Wetterstationen am Zürichsee.",
+        "data": {
+          "stations": "Stationen",
+          "update_interval": "Aktualisierungsintervall"
+        }
+      }
+    },
+    "abort": {
+      "single_instance_allowed": "Es ist nur eine einzige Instanz erlaubt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Optionen",
+        "data": {
+          "stations": "Stationen",
+          "update_interval": "Aktualisierungsintervall"
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "air_temperature": {
+        "name": "Lufttemperatur"
+      },
+      "water_temperature": {
+        "name": "Wassertemperatur"
+      },
+      "wind_speed_avg_10min": {
+        "name": "Windgeschwindigkeit (10 Min. Mittel)"
+      },
+      "wind_gust_max_10min": {
+        "name": "Windböe (10 Min. Maximum)"
+      },
+      "wind_direction": {
+        "name": "Windrichtung"
+      },
+      "wind_force_avg_10min": {
+        "name": "Windstärke (10 Min. Mittel)"
+      },
+      "humidity": {
+        "name": "Luftfeuchtigkeit"
+      },
+      "dew_point": {
+        "name": "Taupunkt"
+      },
+      "barometric_pressure_qfe": {
+        "name": "Luftdruck (QFE)"
+      },
+      "barometric_pressure_qff": {
+        "name": "Luftdruck (QFF)"
+      },
+      "barometric_pressure_qnh": {
+        "name": "Luftdruck (QNH)"
+      },
+      "precipitation_mm": {
+        "name": "Niederschlag"
+      },
+      "precipitation_type": {
+        "name": "Niederschlagstyp"
+      },
+      "global_radiation": {
+        "name": "Globalstrahlung"
+      },
+      "timestamp_cet": {
+        "name": "Letzte Aktualisierung"
+      }
+    }
+  }
+}

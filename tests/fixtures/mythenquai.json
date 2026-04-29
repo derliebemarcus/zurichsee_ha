@@ -1,0 +1,22 @@
+{
+  "ok": true,
+  "result": [
+    {
+      "air_temperature": 12.5,
+      "water_temperature": 11.2,
+      "wind_direction": 240,
+      "wind_force_avg_10min": 3,
+      "wind_gust_max_10min": 5.2,
+      "wind_speed_avg_10min": 3.1,
+      "barometric_pressure_qfe": 1013.2,
+      "barometric_pressure_qff": 1013.5,
+      "barometric_pressure_qnh": 1013.8,
+      "dew_point": 8.4,
+      "humidity": 75,
+      "precipitation_mm": 0.0,
+      "precipitation_type": "none",
+      "global_radiation": 120.5,
+      "timestamp_cet": "2024-04-29T06:00:00+02:00"
+    }
+  ]
+}

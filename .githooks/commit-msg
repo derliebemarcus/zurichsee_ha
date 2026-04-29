@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+MSG_FILE="$1"
+
+# Basic regex for categorized commit messages
+# format: <category>: <description>
+category_regex='^(add|change|deprecate|remove|fix): [^ ].*'
+
+# Read message (excluding comments)
+mapfile -t RAW_LINES < "$MSG_FILE"
+LINES=()
+for line in "${RAW_LINES[@]}"; do
+  case "$line" in
+    \#*) continue ;;
+  esac
+  LINES+=("$line")
+done
+
+if [ "${#LINES[@]}" -eq 0 ]; then
+  echo "Commit message must not be empty."
+  exit 1
+fi
+
+# Check first line
+if [[ ! "${LINES[0]}" =~ $category_regex ]]; then
+  echo "Commit message summary must start with a category: add:, change:, deprecate:, remove:, fix:"
+  exit 1
+fi
+
+echo "Commit message format check passed."
+exit 0

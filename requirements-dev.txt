@@ -1,0 +1,13 @@
+-r requirements.txt
+pytest
+pytest-asyncio
+pytest-cov
+pytest-homeassistant-custom-component
+aioresponses
+syrupy
+ruff
+mypy
+mutmut
+pip-audit
+types-pyyaml
+pip-tools
