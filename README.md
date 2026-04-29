@@ -1,12 +1,19 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/derliebemarcus/zurichsee_ha/main/custom_components/zurichsee_ha/logo.png" alt="Zürichsee Wetterstationen Logo" width="200">
+</p>
+
 # Zürichsee Wetterstationen for Home Assistant
 
 [![GitHub Release](https://img.shields.io/github/v/release/derliebemarcus/zurichsee_ha)](https://github.com/derliebemarcus/zurichsee_ha/releases)
+[![CI](https://github.com/derliebemarcus/zurichsee_ha/actions/workflows/ci.yml/badge.svg)](https://github.com/derliebemarcus/zurichsee_ha/actions/workflows/ci.yml)
 [![License](https://img.shields.io/github/license/derliebemarcus/zurichsee_ha)](LICENSE)
 [![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
 
 Home Assistant custom integration for weather stations of the Wasserschutzpolizei Zurich (tecdottir API).
 
 ## Features
+
+- **Modern UI**: Uses advanced selectors for easy configuration.
 
 - Real-time weather data from **Mythenquai** and **Tiefenbrunnen**.
 - Configurable update intervals (15, 30, or 60 minutes).
