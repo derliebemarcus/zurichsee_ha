@@ -4,6 +4,7 @@ from __future__ import annotations
 
 from typing import Any
 
+import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
 from homeassistant.core import callback
 from homeassistant.helpers.selector import (
@@ -12,7 +13,6 @@ from homeassistant.helpers.selector import (
     SelectSelectorConfig,
     SelectSelectorMode,
 )
-import voluptuous as vol
 
 from .const import (
     CONF_STATIONS,
@@ -46,13 +46,10 @@ class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
 
         data_schema = vol.Schema(
             {
-                vol.Required(
-                    CONF_STATIONS, default=DEFAULT_OPTIONS[CONF_STATIONS]
-                ): SelectSelector(
+                vol.Required(CONF_STATIONS, default=DEFAULT_OPTIONS[CONF_STATIONS]): SelectSelector(
                     SelectSelectorConfig(
                         options=[
-                            SelectOptionDict(value=k, label=v)
-                            for k, v in STATION_NAMES.items()
+                            SelectOptionDict(value=k, label=v) for k, v in STATION_NAMES.items()
                         ],
                         mode=SelectSelectorMode.DROPDOWN,
                         multiple=True,
@@ -105,8 +102,7 @@ class ZurichseeOptionsFlowHandler(OptionsFlow):
                 ): SelectSelector(
                     SelectSelectorConfig(
                         options=[
-                            SelectOptionDict(value=k, label=v)
-                            for k, v in STATION_NAMES.items()
+                            SelectOptionDict(value=k, label=v) for k, v in STATION_NAMES.items()
                         ],
                         mode=SelectSelectorMode.DROPDOWN,
                         multiple=True,
