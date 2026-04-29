@@ -1,5 +1,7 @@
 -r requirements.txt
-pytest-homeassistant-custom-component
+pytest==9.0.0
+pytest-asyncio==1.3.0
+pytest-homeassistant-custom-component==0.13.310
 aioresponses>=0.7.6
 syrupy>=5.0.0
 ruff>=0.15.0
