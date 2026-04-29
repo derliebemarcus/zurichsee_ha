@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2026-04-29
+
+### Added
+- Increased test coverage to 99.57%.
+- Added comprehensive unit and integration tests.
+
+### Fixed
+- Resolved SonarQube issues (unused parameters and unnecessary async).
+- Cleaned up unused imports and improved code quality.
+
 ## [0.1.3] - 2026-04-29
 
 ### Added
