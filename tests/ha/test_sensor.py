@@ -51,3 +51,25 @@ async def test_sensors(hass: HomeAssistant) -> None:
         state = hass.states.get("sensor.mythenquai_water_temperature")
         assert state is not None
         assert state.state == "11.2"
+
+@pytest.mark.asyncio
+async def test_sensor_missing_data(hass: HomeAssistant) -> None:
+    """Test sensor behavior when data is missing."""
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title="Zurichsee",
+        options={"stations": ["mythenquai"], "update_interval": 1800},
+    )
+    entry.add_to_hass(hass)
+
+    with patch(
+        "custom_components.zurichsee_ha.api.ZurichseeApiClient.async_get_measurements",
+        return_value=None,
+    ):
+        await hass.config_entries.async_setup(entry.entry_id)
+        await hass.async_block_till_done()
+
+        state = hass.states.get("sensor.mythenquai_air_temperature")
+        # The sensor is created but its state should be unknown/none
+        assert state is not None
+        assert state.state == "unknown"
