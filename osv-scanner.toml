@@ -1,0 +1,3 @@
+[[IgnoredVulnerabilities]]
+id = "GHSA-6w46-j5rx-g56g"
+reason = "Downgraded due to dependency conflict with pytest-homeassistant-custom-component. Risk is accepted for development/test environment."
