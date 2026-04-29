@@ -7,6 +7,12 @@ from typing import Any
 import voluptuous as vol
 from homeassistant.config_entries import ConfigEntry, ConfigFlow, ConfigFlowResult, OptionsFlow
 from homeassistant.core import callback
+from homeassistant.helpers.selector import (
+    SelectOptionDict,
+    SelectSelector,
+    SelectSelectorConfig,
+    SelectSelectorMode,
+)
 
 from .const import (
     CONF_STATIONS,
@@ -16,12 +22,7 @@ from .const import (
     STATION_NAMES,
     UPDATE_INTERVAL_OPTIONS,
 )
-from homeassistant.helpers.selector import (
-    SelectOptionDict,
-    SelectSelector,
-    SelectSelectorConfig,
-    SelectSelectorMode,
-)
+
 
 
 class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
