@@ -16,6 +16,12 @@ from .const import (
     STATION_NAMES,
     UPDATE_INTERVAL_OPTIONS,
 )
+from homeassistant.helpers.selector import (
+    SelectOptionDict,
+    SelectSelector,
+    SelectSelectorConfig,
+    SelectSelectorMode,
+)
 
 
 class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -33,21 +39,36 @@ class ZurichseeConfigFlow(ConfigFlow, domain=DOMAIN):
                 title="Zürichsee Wetterstationen",
                 data={},
                 options={
-                    CONF_STATIONS: user_input.get(CONF_STATIONS, DEFAULT_OPTIONS[CONF_STATIONS]),
-                    CONF_UPDATE_INTERVAL: user_input.get(
-                        CONF_UPDATE_INTERVAL, DEFAULT_OPTIONS[CONF_UPDATE_INTERVAL]
-                    ),
+                    CONF_STATIONS: user_input[CONF_STATIONS],
+                    CONF_UPDATE_INTERVAL: int(user_input[CONF_UPDATE_INTERVAL]),
                 },
             )
 
         data_schema = vol.Schema(
             {
-                vol.Required(CONF_STATIONS, default=DEFAULT_OPTIONS[CONF_STATIONS]): vol.All(
-                    vol.Coerce(list), [vol.In(STATION_NAMES)]
+                vol.Required(
+                    CONF_STATIONS, default=DEFAULT_OPTIONS[CONF_STATIONS]
+                ): SelectSelector(
+                    SelectSelectorConfig(
+                        options=[
+                            SelectOptionDict(value=k, label=v)
+                            for k, v in STATION_NAMES.items()
+                        ],
+                        mode=SelectSelectorMode.DROPDOWN,
+                        multiple=True,
+                    )
                 ),
                 vol.Required(
                     CONF_UPDATE_INTERVAL, default=DEFAULT_OPTIONS[CONF_UPDATE_INTERVAL]
-                ): vol.In(UPDATE_INTERVAL_OPTIONS),
+                ): SelectSelector(
+                    SelectSelectorConfig(
+                        options=[
+                            SelectOptionDict(value=str(k), label=v)
+                            for k, v in UPDATE_INTERVAL_OPTIONS.items()
+                        ],
+                        mode=SelectSelectorMode.DROPDOWN,
+                    )
+                ),
             }
         )
 
@@ -72,6 +93,7 @@ class ZurichseeOptionsFlowHandler(OptionsFlow):
     async def async_step_init(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
         """Manage the options."""
         if user_input is not None:
+            user_input[CONF_UPDATE_INTERVAL] = int(user_input[CONF_UPDATE_INTERVAL])
             return self.async_create_entry(title="", data=user_input)
 
         options = self._config_entry.options
@@ -80,13 +102,30 @@ class ZurichseeOptionsFlowHandler(OptionsFlow):
                 vol.Required(
                     CONF_STATIONS,
                     default=options.get(CONF_STATIONS, DEFAULT_OPTIONS[CONF_STATIONS]),
-                ): vol.All(vol.Coerce(list), [vol.In(STATION_NAMES)]),
+                ): SelectSelector(
+                    SelectSelectorConfig(
+                        options=[
+                            SelectOptionDict(value=k, label=v)
+                            for k, v in STATION_NAMES.items()
+                        ],
+                        mode=SelectSelectorMode.DROPDOWN,
+                        multiple=True,
+                    )
+                ),
                 vol.Required(
                     CONF_UPDATE_INTERVAL,
                     default=options.get(
                         CONF_UPDATE_INTERVAL, DEFAULT_OPTIONS[CONF_UPDATE_INTERVAL]
                     ),
-                ): vol.In(UPDATE_INTERVAL_OPTIONS),
+                ): SelectSelector(
+                    SelectSelectorConfig(
+                        options=[
+                            SelectOptionDict(value=str(k), label=v)
+                            for k, v in UPDATE_INTERVAL_OPTIONS.items()
+                        ],
+                        mode=SelectSelectorMode.DROPDOWN,
+                    )
+                ),
             }
         )
 

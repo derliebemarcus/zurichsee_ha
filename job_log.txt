@@ -1,0 +1,851 @@
+tests	Set up job	﻿2026-04-29T06:28:15.3654887Z Current runner version: '2.334.0'
+tests	Set up job	2026-04-29T06:28:15.3691615Z ##[group]Runner Image Provisioner
+tests	Set up job	2026-04-29T06:28:15.3692883Z Hosted Compute Agent
+tests	Set up job	2026-04-29T06:28:15.3693730Z Version: 20260213.493
+tests	Set up job	2026-04-29T06:28:15.3694838Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+tests	Set up job	2026-04-29T06:28:15.3695937Z Build Date: 2026-02-13T00:28:41Z
+tests	Set up job	2026-04-29T06:28:15.3697090Z Worker ID: {cff97927-e58c-468d-bed6-49d586f4dad3}
+tests	Set up job	2026-04-29T06:28:15.3698438Z Azure Region: eastus2
+tests	Set up job	2026-04-29T06:28:15.3699326Z ##[endgroup]
+tests	Set up job	2026-04-29T06:28:15.3701716Z ##[group]Operating System
+tests	Set up job	2026-04-29T06:28:15.3702781Z Ubuntu
+tests	Set up job	2026-04-29T06:28:15.3703533Z 24.04.4
+tests	Set up job	2026-04-29T06:28:15.3704322Z LTS
+tests	Set up job	2026-04-29T06:28:15.3705065Z ##[endgroup]
+tests	Set up job	2026-04-29T06:28:15.3705826Z ##[group]Runner Image
+tests	Set up job	2026-04-29T06:28:15.3706880Z Image: ubuntu-24.04
+tests	Set up job	2026-04-29T06:28:15.3707730Z Version: 20260413.86.1
+tests	Set up job	2026-04-29T06:28:15.3709725Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+tests	Set up job	2026-04-29T06:28:15.3712682Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+tests	Set up job	2026-04-29T06:28:15.3714441Z ##[endgroup]
+tests	Set up job	2026-04-29T06:28:15.3716387Z ##[group]GITHUB_TOKEN Permissions
+tests	Set up job	2026-04-29T06:28:15.3719427Z Contents: read
+tests	Set up job	2026-04-29T06:28:15.3720249Z Metadata: read
+tests	Set up job	2026-04-29T06:28:15.3721053Z Packages: read
+tests	Set up job	2026-04-29T06:28:15.3721861Z ##[endgroup]
+tests	Set up job	2026-04-29T06:28:15.3724984Z Secret source: Actions
+tests	Set up job	2026-04-29T06:28:15.3726122Z Prepare workflow directory
+tests	Set up job	2026-04-29T06:28:15.4311150Z Prepare all required actions
+tests	Set up job	2026-04-29T06:28:15.4367498Z Getting action download info
+tests	Set up job	2026-04-29T06:28:15.6966873Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+tests	Set up job	2026-04-29T06:28:15.8402784Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+tests	Set up job	2026-04-29T06:28:15.9301928Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+tests	Set up job	2026-04-29T06:28:16.1682250Z Complete job name: tests
+tests	Check out repository	﻿2026-04-29T06:28:16.2426902Z ##[group]Run actions/checkout@v4
+tests	Check out repository	2026-04-29T06:28:16.2427748Z with:
+tests	Check out repository	2026-04-29T06:28:16.2428395Z   repository: derliebemarcus/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.2429106Z   token: ***
+tests	Check out repository	2026-04-29T06:28:16.2429485Z   ssh-strict: true
+tests	Check out repository	2026-04-29T06:28:16.2429867Z   ssh-user: git
+tests	Check out repository	2026-04-29T06:28:16.2430261Z   persist-credentials: true
+tests	Check out repository	2026-04-29T06:28:16.2430698Z   clean: true
+tests	Check out repository	2026-04-29T06:28:16.2431084Z   sparse-checkout-cone-mode: true
+tests	Check out repository	2026-04-29T06:28:16.2431594Z   fetch-depth: 1
+tests	Check out repository	2026-04-29T06:28:16.2432008Z   fetch-tags: false
+tests	Check out repository	2026-04-29T06:28:16.2432442Z   show-progress: true
+tests	Check out repository	2026-04-29T06:28:16.2432879Z   lfs: false
+tests	Check out repository	2026-04-29T06:28:16.2433290Z   submodules: false
+tests	Check out repository	2026-04-29T06:28:16.2433730Z   set-safe-directory: true
+tests	Check out repository	2026-04-29T06:28:16.2434442Z env:
+tests	Check out repository	2026-04-29T06:28:16.2434833Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+tests	Check out repository	2026-04-29T06:28:16.2435333Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.3446926Z Syncing repository: derliebemarcus/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.3449781Z ##[group]Getting Git version info
+tests	Check out repository	2026-04-29T06:28:16.3451059Z Working directory is '/home/runner/work/zurichsee_ha/zurichsee_ha'
+tests	Check out repository	2026-04-29T06:28:16.3452861Z [command]/usr/bin/git version
+tests	Check out repository	2026-04-29T06:28:16.3478708Z git version 2.53.0
+tests	Check out repository	2026-04-29T06:28:16.3532606Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.3546336Z Temporarily overriding HOME='/home/runner/work/_temp/1eb435ac-e525-4579-8829-0d7b3bced846' before making global git config changes
+tests	Check out repository	2026-04-29T06:28:16.3549343Z Adding repository directory to the temporary git global config as a safe directory
+tests	Check out repository	2026-04-29T06:28:16.3551851Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zurichsee_ha/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.3591340Z Deleting the contents of '/home/runner/work/zurichsee_ha/zurichsee_ha'
+tests	Check out repository	2026-04-29T06:28:16.3596080Z ##[group]Initializing the repository
+tests	Check out repository	2026-04-29T06:28:16.3601937Z [command]/usr/bin/git init /home/runner/work/zurichsee_ha/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.3693131Z hint: Using 'master' as the name for the initial branch. This default branch name
+tests	Check out repository	2026-04-29T06:28:16.3695687Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+tests	Check out repository	2026-04-29T06:28:16.3697478Z hint: to use in all of your new repositories, which will suppress this warning,
+tests	Check out repository	2026-04-29T06:28:16.3699117Z hint: call:
+tests	Check out repository	2026-04-29T06:28:16.3699883Z hint:
+tests	Check out repository	2026-04-29T06:28:16.3700984Z hint: 	git config --global init.defaultBranch <name>
+tests	Check out repository	2026-04-29T06:28:16.3702334Z hint:
+tests	Check out repository	2026-04-29T06:28:16.3703570Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+tests	Check out repository	2026-04-29T06:28:16.3706517Z hint: 'development'. The just-created branch can be renamed via this command:
+tests	Check out repository	2026-04-29T06:28:16.3708369Z hint:
+tests	Check out repository	2026-04-29T06:28:16.3709336Z hint: 	git branch -m <name>
+tests	Check out repository	2026-04-29T06:28:16.3710341Z hint:
+tests	Check out repository	2026-04-29T06:28:16.3711820Z hint: Disable this message with "git config set advice.defaultBranchName false"
+tests	Check out repository	2026-04-29T06:28:16.3714034Z Initialized empty Git repository in /home/runner/work/zurichsee_ha/zurichsee_ha/.git/
+tests	Check out repository	2026-04-29T06:28:16.3717792Z [command]/usr/bin/git remote add origin https://github.com/derliebemarcus/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.3740821Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.3742009Z ##[group]Disabling automatic garbage collection
+tests	Check out repository	2026-04-29T06:28:16.3746191Z [command]/usr/bin/git config --local gc.auto 0
+tests	Check out repository	2026-04-29T06:28:16.3778742Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.3780330Z ##[group]Setting up auth
+tests	Check out repository	2026-04-29T06:28:16.3785403Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+tests	Check out repository	2026-04-29T06:28:16.3821247Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+tests	Check out repository	2026-04-29T06:28:16.4144811Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+tests	Check out repository	2026-04-29T06:28:16.4194062Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+tests	Check out repository	2026-04-29T06:28:16.4431401Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+tests	Check out repository	2026-04-29T06:28:16.4463739Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+tests	Check out repository	2026-04-29T06:28:16.4684003Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+tests	Check out repository	2026-04-29T06:28:16.4720257Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.4721062Z ##[group]Fetching the repository
+tests	Check out repository	2026-04-29T06:28:16.4729016Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +243e6f24b98654e19143acaffd592e0eb8bc438f:refs/remotes/origin/main
+tests	Check out repository	2026-04-29T06:28:16.7376422Z From https://github.com/derliebemarcus/zurichsee_ha
+tests	Check out repository	2026-04-29T06:28:16.7378547Z  * [new ref]         243e6f24b98654e19143acaffd592e0eb8bc438f -> origin/main
+tests	Check out repository	2026-04-29T06:28:16.7406244Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.7407572Z ##[group]Determining the checkout info
+tests	Check out repository	2026-04-29T06:28:16.7409325Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.7415335Z [command]/usr/bin/git sparse-checkout disable
+tests	Check out repository	2026-04-29T06:28:16.7456385Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+tests	Check out repository	2026-04-29T06:28:16.7488742Z ##[group]Checking out the ref
+tests	Check out repository	2026-04-29T06:28:16.7492264Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+tests	Check out repository	2026-04-29T06:28:16.7562952Z Switched to a new branch 'main'
+tests	Check out repository	2026-04-29T06:28:16.7565358Z branch 'main' set up to track 'origin/main'.
+tests	Check out repository	2026-04-29T06:28:16.7573115Z ##[endgroup]
+tests	Check out repository	2026-04-29T06:28:16.7612746Z [command]/usr/bin/git log -1 --format=%H
+tests	Check out repository	2026-04-29T06:28:16.7636109Z 243e6f24b98654e19143acaffd592e0eb8bc438f
+tests	Set up Python	﻿2026-04-29T06:28:16.7933494Z ##[group]Run actions/setup-python@v5
+tests	Set up Python	2026-04-29T06:28:16.7934328Z with:
+tests	Set up Python	2026-04-29T06:28:16.7934762Z   python-version: 3.14
+tests	Set up Python	2026-04-29T06:28:16.7935289Z   cache: pip
+tests	Set up Python	2026-04-29T06:28:16.7935739Z   check-latest: false
+tests	Set up Python	2026-04-29T06:28:16.7936762Z   token: ***
+tests	Set up Python	2026-04-29T06:28:16.7937240Z   update-environment: true
+tests	Set up Python	2026-04-29T06:28:16.7937862Z   allow-prereleases: false
+tests	Set up Python	2026-04-29T06:28:16.7938663Z   freethreaded: false
+tests	Set up Python	2026-04-29T06:28:16.7939159Z env:
+tests	Set up Python	2026-04-29T06:28:16.7939628Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+tests	Set up Python	2026-04-29T06:28:16.7940389Z ##[endgroup]
+tests	Set up Python	2026-04-29T06:28:16.9246134Z ##[group]Installed versions
+tests	Set up Python	2026-04-29T06:28:16.9332459Z (node:2296) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+tests	Set up Python	2026-04-29T06:28:16.9336530Z (Use `node --trace-deprecation ...` to show where the warning was created)
+tests	Set up Python	2026-04-29T06:28:16.9339013Z Successfully set up CPython (3.14.4)
+tests	Set up Python	2026-04-29T06:28:16.9341072Z ##[endgroup]
+tests	Set up Python	2026-04-29T06:28:17.0025282Z [command]/opt/hostedtoolcache/Python/3.14.4/x64/bin/pip cache dir
+tests	Set up Python	2026-04-29T06:28:17.8987379Z /home/runner/.cache/pip
+tests	Set up Python	2026-04-29T06:28:18.0028986Z pip cache is not found
+tests	Install dependencies	﻿2026-04-29T06:28:18.0173161Z ##[group]Run python -m pip install --upgrade pip setuptools wheel
+tests	Install dependencies	2026-04-29T06:28:18.0173806Z [36;1mpython -m pip install --upgrade pip setuptools wheel[0m
+tests	Install dependencies	2026-04-29T06:28:18.0174255Z [36;1mpython -m pip install -r requirements-dev.txt[0m
+tests	Install dependencies	2026-04-29T06:28:18.0202583Z shell: /usr/bin/bash -e {0}
+tests	Install dependencies	2026-04-29T06:28:18.0202890Z env:
+tests	Install dependencies	2026-04-29T06:28:18.0203144Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+tests	Install dependencies	2026-04-29T06:28:18.0203516Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Install dependencies	2026-04-29T06:28:18.0203979Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib/pkgconfig
+tests	Install dependencies	2026-04-29T06:28:18.0204433Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Install dependencies	2026-04-29T06:28:18.0204844Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Install dependencies	2026-04-29T06:28:18.0205244Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Install dependencies	2026-04-29T06:28:18.0205632Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib
+tests	Install dependencies	2026-04-29T06:28:18.0205977Z ##[endgroup]
+tests	Install dependencies	2026-04-29T06:28:18.9864840Z Requirement already satisfied: pip in /opt/hostedtoolcache/Python/3.14.4/x64/lib/python3.14/site-packages (26.0.1)
+tests	Install dependencies	2026-04-29T06:28:19.1088533Z Collecting pip
+tests	Install dependencies	2026-04-29T06:28:19.1755363Z   Downloading pip-26.1-py3-none-any.whl.metadata (4.6 kB)
+tests	Install dependencies	2026-04-29T06:28:19.3074276Z Collecting setuptools
+tests	Install dependencies	2026-04-29T06:28:19.3150297Z   Downloading setuptools-82.0.1-py3-none-any.whl.metadata (6.5 kB)
+tests	Install dependencies	2026-04-29T06:28:19.3469339Z Collecting wheel
+tests	Install dependencies	2026-04-29T06:28:19.3543255Z   Downloading wheel-0.47.0-py3-none-any.whl.metadata (2.3 kB)
+tests	Install dependencies	2026-04-29T06:28:19.3742397Z Collecting packaging>=24.0 (from wheel)
+tests	Install dependencies	2026-04-29T06:28:19.3813409Z   Downloading packaging-26.2-py3-none-any.whl.metadata (3.5 kB)
+tests	Install dependencies	2026-04-29T06:28:19.3922054Z Downloading pip-26.1-py3-none-any.whl (1.8 MB)
+tests	Install dependencies	2026-04-29T06:28:19.4989736Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 19.3 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:19.5060038Z Downloading setuptools-82.0.1-py3-none-any.whl (1.0 MB)
+tests	Install dependencies	2026-04-29T06:28:19.5421813Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 28.1 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:19.5493132Z Downloading wheel-0.47.0-py3-none-any.whl (32 kB)
+tests	Install dependencies	2026-04-29T06:28:19.5592765Z Downloading packaging-26.2-py3-none-any.whl (100 kB)
+tests	Install dependencies	2026-04-29T06:28:19.5994094Z Installing collected packages: setuptools, pip, packaging, wheel
+tests	Install dependencies	2026-04-29T06:28:20.4098750Z   Attempting uninstall: pip
+tests	Install dependencies	2026-04-29T06:28:20.4123244Z     Found existing installation: pip 26.0.1
+tests	Install dependencies	2026-04-29T06:28:20.4746291Z     Uninstalling pip-26.0.1:
+tests	Install dependencies	2026-04-29T06:28:20.4804693Z       Successfully uninstalled pip-26.0.1
+tests	Install dependencies	2026-04-29T06:28:21.7817875Z 
+tests	Install dependencies	2026-04-29T06:28:21.7831567Z Successfully installed packaging-26.2 pip-26.1 setuptools-82.0.1 wheel-0.47.0
+tests	Install dependencies	2026-04-29T06:28:22.8741266Z Collecting aiohttp==3.13.5 (from -r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:22.9383694Z   Downloading aiohttp-3.13.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+tests	Install dependencies	2026-04-29T06:28:23.0480295Z Collecting pydantic==2.12.2 (from -r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:23.0553631Z   Downloading pydantic-2.12.2-py3-none-any.whl.metadata (85 kB)
+tests	Install dependencies	2026-04-29T06:28:23.1019447Z Collecting pytest==9.0.0 (from -r requirements-dev.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:23.1103808Z   Downloading pytest-9.0.0-py3-none-any.whl.metadata (7.6 kB)
+tests	Install dependencies	2026-04-29T06:28:23.1315809Z Collecting pytest-asyncio==1.3.0 (from -r requirements-dev.txt (line 3))
+tests	Install dependencies	2026-04-29T06:28:23.1385833Z   Downloading pytest_asyncio-1.3.0-py3-none-any.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:23.2006659Z Collecting pytest-homeassistant-custom-component==0.13.325 (from -r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:23.2084936Z   Downloading pytest_homeassistant_custom_component-0.13.325-py3-none-any.whl.metadata (5.9 kB)
+tests	Install dependencies	2026-04-29T06:28:23.2251337Z Collecting aioresponses>=0.7.6 (from -r requirements-dev.txt (line 5))
+tests	Install dependencies	2026-04-29T06:28:23.2322409Z   Downloading aioresponses-0.7.8-py2.py3-none-any.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:23.2564163Z Collecting syrupy>=5.0.0 (from -r requirements-dev.txt (line 6))
+tests	Install dependencies	2026-04-29T06:28:23.2633911Z   Downloading syrupy-5.1.0-py3-none-any.whl.metadata (41 kB)
+tests	Install dependencies	2026-04-29T06:28:23.5874824Z Collecting ruff>=0.15.0 (from -r requirements-dev.txt (line 7))
+tests	Install dependencies	2026-04-29T06:28:23.5946340Z   Downloading ruff-0.15.12-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (26 kB)
+tests	Install dependencies	2026-04-29T06:28:23.6928403Z Collecting mypy>=1.15.0 (from -r requirements-dev.txt (line 8))
+tests	Install dependencies	2026-04-29T06:28:23.7018198Z   Downloading mypy-1.20.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+tests	Install dependencies	2026-04-29T06:28:23.7254387Z Collecting mutmut>=3.0.0 (from -r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:23.7323648Z   Downloading mutmut-3.5.0-py3-none-any.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:23.7526396Z Collecting pip-audit>=2.7.0 (from -r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:23.7597928Z   Downloading pip_audit-2.10.0-py3-none-any.whl.metadata (28 kB)
+tests	Install dependencies	2026-04-29T06:28:23.7824756Z Collecting types-pyyaml>=6.0.0 (from -r requirements-dev.txt (line 11))
+tests	Install dependencies	2026-04-29T06:28:23.7897065Z   Downloading types_pyyaml-6.0.12.20260408-py3-none-any.whl.metadata (1.7 kB)
+tests	Install dependencies	2026-04-29T06:28:23.8145834Z Collecting pip-tools>=7.0.0 (from -r requirements-dev.txt (line 12))
+tests	Install dependencies	2026-04-29T06:28:23.8217047Z   Downloading pip_tools-7.5.3-py3-none-any.whl.metadata (27 kB)
+tests	Install dependencies	2026-04-29T06:28:23.8427575Z Collecting aiohappyeyeballs>=2.5.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:23.8497980Z   Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl.metadata (5.9 kB)
+tests	Install dependencies	2026-04-29T06:28:23.8642938Z Collecting aiosignal>=1.4.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:23.8713027Z   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+tests	Install dependencies	2026-04-29T06:28:23.8889693Z Collecting attrs>=17.3.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:23.8961796Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+tests	Install dependencies	2026-04-29T06:28:23.9662884Z Collecting frozenlist>=1.1.1 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:23.9737369Z   Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+tests	Install dependencies	2026-04-29T06:28:24.1941618Z Collecting multidict<7.0,>=4.5 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:24.2014818Z   Downloading multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+tests	Install dependencies	2026-04-29T06:28:24.2540577Z Collecting propcache>=0.2.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:24.2614894Z   Downloading propcache-0.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (13 kB)
+tests	Install dependencies	2026-04-29T06:28:24.5049617Z Collecting yarl<2.0,>=1.17.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:24.5124157Z   Downloading yarl-1.23.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+tests	Install dependencies	2026-04-29T06:28:24.5381587Z Collecting annotated-types>=0.6.0 (from pydantic==2.12.2->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:24.5450350Z   Downloading annotated_types-0.7.0-py3-none-any.whl.metadata (15 kB)
+tests	Install dependencies	2026-04-29T06:28:25.1307848Z Collecting pydantic-core==2.41.4 (from pydantic==2.12.2->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.1386024Z   Downloading pydantic_core-2.41.4-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (7.3 kB)
+tests	Install dependencies	2026-04-29T06:28:25.1575153Z Collecting typing-extensions>=4.14.1 (from pydantic==2.12.2->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.1646023Z   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+tests	Install dependencies	2026-04-29T06:28:25.1795126Z Collecting typing-inspection>=0.4.2 (from pydantic==2.12.2->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.1865405Z   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+tests	Install dependencies	2026-04-29T06:28:25.2081797Z Collecting iniconfig>=1.0.1 (from pytest==9.0.0->-r requirements-dev.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.2152864Z   Downloading iniconfig-2.3.0-py3-none-any.whl.metadata (2.5 kB)
+tests	Install dependencies	2026-04-29T06:28:25.2193361Z Requirement already satisfied: packaging>=22 in /opt/hostedtoolcache/Python/3.14.4/x64/lib/python3.14/site-packages (from pytest==9.0.0->-r requirements-dev.txt (line 2)) (26.2)
+tests	Install dependencies	2026-04-29T06:28:25.2348548Z Collecting pluggy<2,>=1.5 (from pytest==9.0.0->-r requirements-dev.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.2420969Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+tests	Install dependencies	2026-04-29T06:28:25.2636273Z Collecting pygments>=2.7.2 (from pytest==9.0.0->-r requirements-dev.txt (line 2))
+tests	Install dependencies	2026-04-29T06:28:25.2707196Z   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+tests	Install dependencies	2026-04-29T06:28:25.5359765Z Collecting sqlalchemy (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:25.5435926Z   Downloading sqlalchemy-2.0.49-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+tests	Install dependencies	2026-04-29T06:28:25.8713570Z Collecting coverage==7.10.6 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:25.8799003Z   Downloading coverage-7.10.6-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (8.9 kB)
+tests	Install dependencies	2026-04-29T06:28:25.8976442Z Collecting freezegun==1.5.2 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:25.9046357Z   Downloading freezegun-1.5.2-py3-none-any.whl.metadata (13 kB)
+tests	Install dependencies	2026-04-29T06:28:25.9225006Z Collecting license-expression==30.4.3 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:25.9311350Z   Downloading license_expression-30.4.3-py3-none-any.whl.metadata (11 kB)
+tests	Install dependencies	2026-04-29T06:28:25.9746387Z Collecting mock-open==1.4.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:25.9816719Z   Downloading mock-open-1.4.0.tar.gz (12 kB)
+tests	Install dependencies	2026-04-29T06:28:25.9917664Z   Installing build dependencies: started
+tests	Install dependencies	2026-04-29T06:28:27.5730776Z   Installing build dependencies: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:27.5737044Z   Getting requirements to build wheel: started
+tests	Install dependencies	2026-04-29T06:28:28.0921695Z   Getting requirements to build wheel: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:28.0931102Z   Preparing metadata (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:28.3031087Z   Preparing metadata (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:28.3182768Z Collecting pylint-per-file-ignores==1.4.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.3252304Z   Downloading pylint_per_file_ignores-1.4.0-py3-none-any.whl.metadata (2.0 kB)
+tests	Install dependencies	2026-04-29T06:28:28.3459590Z Collecting pipdeptree==2.26.1 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.3527220Z   Downloading pipdeptree-2.26.1-py3-none-any.whl.metadata (14 kB)
+tests	Install dependencies	2026-04-29T06:28:28.3687782Z Collecting pytest-aiohttp==1.1.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.3756508Z   Downloading pytest_aiohttp-1.1.0-py3-none-any.whl.metadata (2.7 kB)
+tests	Install dependencies	2026-04-29T06:28:28.3926907Z Collecting pytest-cov==7.0.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.4113384Z   Downloading pytest_cov-7.0.0-py3-none-any.whl.metadata (31 kB)
+tests	Install dependencies	2026-04-29T06:28:28.4294196Z Collecting pytest-freezer==0.4.9 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.4362615Z   Downloading pytest_freezer-0.4.9-py3-none-any.whl.metadata (2.1 kB)
+tests	Install dependencies	2026-04-29T06:28:28.4526904Z Collecting pytest-github-actions-annotate-failures==0.3.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.4596534Z   Downloading pytest_github_actions_annotate_failures-0.3.0-py3-none-any.whl.metadata (3.3 kB)
+tests	Install dependencies	2026-04-29T06:28:28.4739369Z Collecting pytest-socket==0.7.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.4806457Z   Downloading pytest_socket-0.7.0-py3-none-any.whl.metadata (6.7 kB)
+tests	Install dependencies	2026-04-29T06:28:28.4956784Z Collecting pytest-timeout==2.4.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.5028931Z   Downloading pytest_timeout-2.4.0-py3-none-any.whl.metadata (20 kB)
+tests	Install dependencies	2026-04-29T06:28:28.5214129Z Collecting pytest-unordered==0.7.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.5285284Z   Downloading pytest_unordered-0.7.0-py3-none-any.whl.metadata (6.7 kB)
+tests	Install dependencies	2026-04-29T06:28:28.5433956Z Collecting pytest-picked==0.5.1 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.5503495Z   Downloading pytest_picked-0.5.1-py3-none-any.whl.metadata (4.0 kB)
+tests	Install dependencies	2026-04-29T06:28:28.5686515Z Collecting pytest-xdist==3.8.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.5756771Z   Downloading pytest_xdist-3.8.0-py3-none-any.whl.metadata (3.0 kB)
+tests	Install dependencies	2026-04-29T06:28:28.5915986Z Collecting requests-mock==1.12.1 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.5986694Z   Downloading requests_mock-1.12.1-py2.py3-none-any.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:28.6165202Z Collecting respx==0.22.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.6234899Z   Downloading respx-0.22.0-py2.py3-none-any.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:28.6281685Z Collecting syrupy>=5.0.0 (from -r requirements-dev.txt (line 6))
+tests	Install dependencies	2026-04-29T06:28:28.6362823Z   Downloading syrupy-5.0.0-py3-none-any.whl.metadata (39 kB)
+tests	Install dependencies	2026-04-29T06:28:28.6664702Z Collecting tqdm==4.67.1 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.6734647Z   Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+tests	Install dependencies	2026-04-29T06:28:28.8282090Z Collecting homeassistant==2026.4.4 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.8366951Z   Downloading homeassistant-2026.4.4-py3-none-any.whl.metadata (4.8 kB)
+tests	Install dependencies	2026-04-29T06:28:28.8551779Z Collecting aiohasupervisor==0.4.3 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.8629700Z   Downloading aiohasupervisor-0.4.3-py3-none-any.whl.metadata (5.0 kB)
+tests	Install dependencies	2026-04-29T06:28:28.8688019Z Collecting sqlalchemy (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.8766717Z   Downloading sqlalchemy-2.0.41-py3-none-any.whl.metadata (9.6 kB)
+tests	Install dependencies	2026-04-29T06:28:28.8970193Z Collecting paho-mqtt==2.1.0 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:28.9038212Z   Downloading paho_mqtt-2.1.0-py3-none-any.whl.metadata (23 kB)
+tests	Install dependencies	2026-04-29T06:28:29.0766555Z Collecting numpy==2.3.2 (from pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.0846424Z   Downloading numpy-2.3.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+tests	Install dependencies	2026-04-29T06:28:29.1178404Z Collecting mashumaro<4.0,>=3.11 (from aiohasupervisor==0.4.3->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.1250343Z   Downloading mashumaro-3.20-py3-none-any.whl.metadata (118 kB)
+tests	Install dependencies	2026-04-29T06:28:29.3798436Z Collecting orjson<4.0.0,>=3.6.1 (from aiohasupervisor==0.4.3->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.3878292Z   Downloading orjson-3.11.8-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+tests	Install dependencies	2026-04-29T06:28:29.4092303Z Collecting python-dateutil>=2.7 (from freezegun==1.5.2->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.4163650Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+tests	Install dependencies	2026-04-29T06:28:29.4335846Z Collecting aiodns==4.0.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.4405629Z   Downloading aiodns-4.0.0-py3-none-any.whl.metadata (7.7 kB)
+tests	Install dependencies	2026-04-29T06:28:29.4636886Z Collecting aiogithubapi==26.0.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.4718140Z   Downloading aiogithubapi-26.0.0-py3-none-any.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:29.4868266Z Collecting aiohttp_cors==0.8.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.4938470Z   Downloading aiohttp_cors-0.8.1-py3-none-any.whl.metadata (20 kB)
+tests	Install dependencies	2026-04-29T06:28:29.5147767Z Collecting aiohttp-fast-zlib==0.3.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.5228652Z   Downloading aiohttp_fast_zlib-0.3.0-py3-none-any.whl.metadata (5.7 kB)
+tests	Install dependencies	2026-04-29T06:28:29.5382542Z Collecting aiohttp-asyncmdnsresolver==0.1.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.5457696Z   Downloading aiohttp_asyncmdnsresolver-0.1.1-py3-none-any.whl.metadata (16 kB)
+tests	Install dependencies	2026-04-29T06:28:29.5626010Z Collecting aiozoneinfo==0.2.3 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.5710409Z   Downloading aiozoneinfo-0.2.3-py3-none-any.whl.metadata (5.4 kB)
+tests	Install dependencies	2026-04-29T06:28:29.5951464Z Collecting annotatedyaml==1.0.2 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.6034763Z   Downloading annotatedyaml-1.0.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.2 kB)
+tests	Install dependencies	2026-04-29T06:28:29.6210356Z Collecting astral==2.2 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.6285600Z   Downloading astral-2.2-py2.py3-none-any.whl.metadata (1.5 kB)
+tests	Install dependencies	2026-04-29T06:28:29.6497241Z Collecting async-interrupt==1.2.2 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.6580058Z   Downloading async_interrupt-1.2.2-py3-none-any.whl.metadata (4.9 kB)
+tests	Install dependencies	2026-04-29T06:28:29.6630255Z Collecting attrs>=17.3.0 (from aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:29.6699840Z   Downloading attrs-25.4.0-py3-none-any.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:29.6861322Z Collecting atomicwrites-homeassistant==1.4.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.6937179Z   Downloading atomicwrites_homeassistant-1.4.1-py2.py3-none-any.whl.metadata (6.0 kB)
+tests	Install dependencies	2026-04-29T06:28:29.7158921Z Collecting audioop-lts==0.2.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.7238416Z   Downloading audioop_lts-0.2.1-cp313-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (1.6 kB)
+tests	Install dependencies	2026-04-29T06:28:29.7413214Z Collecting awesomeversion==25.8.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.7498306Z   Downloading awesomeversion-25.8.0-py3-none-any.whl.metadata (9.8 kB)
+tests	Install dependencies	2026-04-29T06:28:29.7908828Z Collecting bcrypt==5.0.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.7981143Z   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:29.8223362Z Collecting certifi>=2021.5.30 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.8295027Z   Downloading certifi-2026.4.22-py3-none-any.whl.metadata (2.5 kB)
+tests	Install dependencies	2026-04-29T06:28:29.8538001Z Collecting ciso8601==2.3.3 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.8618866Z   Downloading ciso8601-2.3.3-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (24 kB)
+tests	Install dependencies	2026-04-29T06:28:29.8767307Z Collecting cronsim==2.7 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.8836886Z   Downloading cronsim-2.7-py3-none-any.whl.metadata (6.9 kB)
+tests	Install dependencies	2026-04-29T06:28:29.9494057Z Collecting fnv-hash-fast==2.0.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:29.9580697Z   Downloading fnv_hash_fast-2.0.0.tar.gz (5.7 kB)
+tests	Install dependencies	2026-04-29T06:28:29.9641924Z   Installing build dependencies: started
+tests	Install dependencies	2026-04-29T06:28:30.7743421Z   Installing build dependencies: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:30.7748869Z   Getting requirements to build wheel: started
+tests	Install dependencies	2026-04-29T06:28:31.0265688Z   Getting requirements to build wheel: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:31.0274661Z   Preparing metadata (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:31.2834372Z   Preparing metadata (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:31.3098600Z Collecting hass-nabucasa==2.2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.3191128Z   Downloading hass_nabucasa-2.2.0-py3-none-any.whl.metadata (4.3 kB)
+tests	Install dependencies	2026-04-29T06:28:31.3409047Z Collecting httpx==0.28.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.3480789Z   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+tests	Install dependencies	2026-04-29T06:28:31.3657453Z Collecting home-assistant-bluetooth==1.13.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.3737908Z   Downloading home_assistant_bluetooth-1.13.1-py3-none-any.whl.metadata (5.4 kB)
+tests	Install dependencies	2026-04-29T06:28:31.3873857Z Collecting ifaddr==0.2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.4010845Z   Downloading ifaddr-0.2.0-py3-none-any.whl.metadata (4.9 kB)
+tests	Install dependencies	2026-04-29T06:28:31.4198637Z Collecting Jinja2==3.1.6 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.4266771Z   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+tests	Install dependencies	2026-04-29T06:28:31.4542258Z Collecting lru-dict==1.3.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:31.4628447Z   Downloading lru-dict-1.3.0.tar.gz (13 kB)
+tests	Install dependencies	2026-04-29T06:28:31.4716864Z   Installing build dependencies: started
+tests	Install dependencies	2026-04-29T06:28:32.1797994Z   Installing build dependencies: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:32.1803340Z   Getting requirements to build wheel: started
+tests	Install dependencies	2026-04-29T06:28:32.7599203Z   Getting requirements to build wheel: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:32.7608088Z   Preparing metadata (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:32.9666744Z   Preparing metadata (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:32.9835026Z Collecting PyJWT==2.10.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:32.9904319Z   Downloading PyJWT-2.10.1-py3-none-any.whl.metadata (4.0 kB)
+tests	Install dependencies	2026-04-29T06:28:33.1499680Z Collecting cryptography==46.0.7 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.1574980Z   Downloading cryptography-46.0.7-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (5.7 kB)
+tests	Install dependencies	2026-04-29T06:28:33.3149902Z Collecting Pillow==12.2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.3226023Z   Downloading pillow-12.2.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (8.8 kB)
+tests	Install dependencies	2026-04-29T06:28:33.3427844Z Collecting pyOpenSSL==26.0.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.3498861Z   Downloading pyopenssl-26.0.0-py3-none-any.whl.metadata (18 kB)
+tests	Install dependencies	2026-04-29T06:28:33.3556478Z Collecting orjson<4.0.0,>=3.6.1 (from aiohasupervisor==0.4.3->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.3640921Z   Downloading orjson-3.11.7-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+tests	Install dependencies	2026-04-29T06:28:33.3819532Z Collecting psutil-home-assistant==0.0.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.4002457Z   Downloading psutil_home_assistant-0.0.1-py3-none-any.whl.metadata (882 bytes)
+tests	Install dependencies	2026-04-29T06:28:33.4166548Z Collecting python-slugify==8.0.4 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.4237138Z   Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+tests	Install dependencies	2026-04-29T06:28:33.4621091Z Collecting PyYAML==6.0.3 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.4697131Z   Downloading pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+tests	Install dependencies	2026-04-29T06:28:33.4929044Z Collecting requests==2.33.1 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.5000744Z   Downloading requests-2.33.1-py3-none-any.whl.metadata (4.8 kB)
+tests	Install dependencies	2026-04-29T06:28:33.5186828Z Collecting securetar==2026.4.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.5266883Z   Downloading securetar-2026.4.0-py3-none-any.whl.metadata (2.3 kB)
+tests	Install dependencies	2026-04-29T06:28:33.5495739Z Collecting standard-aifc==3.13.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.5576064Z   Downloading standard_aifc-3.13.0-py3-none-any.whl.metadata (969 bytes)
+tests	Install dependencies	2026-04-29T06:28:33.5704681Z Collecting standard-telnetlib==3.13.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.5781518Z   Downloading standard_telnetlib-3.13.0-py3-none-any.whl.metadata (868 bytes)
+tests	Install dependencies	2026-04-29T06:28:33.6235968Z Collecting ulid-transform==2.2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.6313792Z   Downloading ulid_transform-2.2.0-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (5.6 kB)
+tests	Install dependencies	2026-04-29T06:28:33.6532718Z Collecting urllib3>=2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.6600903Z   Downloading urllib3-2.6.3-py3-none-any.whl.metadata (6.9 kB)
+tests	Install dependencies	2026-04-29T06:28:33.8791571Z Collecting uv==0.11.6 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.8877546Z   Downloading uv-0.11.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (11 kB)
+tests	Install dependencies	2026-04-29T06:28:33.9037382Z Collecting voluptuous==0.15.2 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.9106562Z   Downloading voluptuous-0.15.2-py3-none-any.whl.metadata (20 kB)
+tests	Install dependencies	2026-04-29T06:28:33.9262556Z Collecting voluptuous-serialize==2.7.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.9345825Z   Downloading voluptuous_serialize-2.7.0-py3-none-any.whl.metadata (1.9 kB)
+tests	Install dependencies	2026-04-29T06:28:33.9488656Z Collecting voluptuous-openapi==0.2.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.9568592Z   Downloading voluptuous_openapi-0.2.0-py3-none-any.whl.metadata (1.7 kB)
+tests	Install dependencies	2026-04-29T06:28:33.9714304Z Collecting webrtc-models==0.3.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:33.9783210Z   Downloading webrtc_models-0.3.0-py3-none-any.whl.metadata (2.9 kB)
+tests	Install dependencies	2026-04-29T06:28:34.3822048Z Collecting zeroconf==0.148.0 (from homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.3960067Z   Downloading zeroconf-0.148.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.3 kB)
+tests	Install dependencies	2026-04-29T06:28:34.4161381Z Collecting idna>=2.0 (from yarl<2.0,>=1.17.0->aiohttp==3.13.5->-r /home/runner/work/zurichsee_ha/zurichsee_ha/requirements.txt (line 1))
+tests	Install dependencies	2026-04-29T06:28:34.4230633Z   Downloading idna-3.13-py3-none-any.whl.metadata (8.0 kB)
+tests	Install dependencies	2026-04-29T06:28:34.4982494Z Collecting pycares<6,>=5.0.0 (from aiodns==4.0.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.5068988Z   Downloading pycares-5.0.1-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:34.5250731Z Collecting backoff<3 (from aiogithubapi==26.0.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.5316781Z   Downloading backoff-2.2.1-py3-none-any.whl.metadata (14 kB)
+tests	Install dependencies	2026-04-29T06:28:34.5551388Z Collecting tzdata>=2024.1 (from aiozoneinfo==0.2.3->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.5620838Z   Downloading tzdata-2026.2-py2.py3-none-any.whl.metadata (1.4 kB)
+tests	Install dependencies	2026-04-29T06:28:34.6009773Z Collecting pytz (from astral==2.2->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.6079585Z   Downloading pytz-2026.1.post1-py2.py3-none-any.whl.metadata (22 kB)
+tests	Install dependencies	2026-04-29T06:28:34.7120522Z Collecting cffi>=2.0.0 (from cryptography==46.0.7->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.7192925Z   Downloading cffi-2.0.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB)
+tests	Install dependencies	2026-04-29T06:28:34.7347418Z Collecting fnvhash<0.3,>=0.1 (from fnv-hash-fast==2.0.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.7417184Z   Downloading fnvhash-0.2.1-py3-none-any.whl.metadata (1.6 kB)
+tests	Install dependencies	2026-04-29T06:28:34.7747819Z Collecting acme==5.4.0 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:34.7850452Z   Downloading acme-5.4.0-py3-none-any.whl.metadata (1.3 kB)
+tests	Install dependencies	2026-04-29T06:28:35.2572034Z Collecting grpcio<2,>=1.75.1 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.2660468Z   Downloading grpcio-1.80.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+tests	Install dependencies	2026-04-29T06:28:35.2844831Z Collecting icmplib<4,>=3 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.2912968Z   Downloading icmplib-3.0.4-py3-none-any.whl.metadata (19 kB)
+tests	Install dependencies	2026-04-29T06:28:35.3073089Z Collecting josepy<3,>=2 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.3141219Z   Downloading josepy-2.2.0-py3-none-any.whl.metadata (1.7 kB)
+tests	Install dependencies	2026-04-29T06:28:35.3309659Z Collecting pycognito==2024.5.1 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.3390329Z   Downloading pycognito-2024.5.1-py3-none-any.whl.metadata (24 kB)
+tests	Install dependencies	2026-04-29T06:28:35.3614427Z Collecting snitun==0.45.1 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.3692178Z   Downloading snitun-0.45.1-py3-none-any.whl.metadata (6.4 kB)
+tests	Install dependencies	2026-04-29T06:28:35.3862728Z Collecting sentence-stream<2,>=1.2.0 (from hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.3973189Z   Downloading sentence_stream-1.3.0-py3-none-any.whl.metadata (1.9 kB)
+tests	Install dependencies	2026-04-29T06:28:35.4896327Z Collecting charset_normalizer<4,>=2 (from requests==2.33.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.4969778Z   Downloading charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+tests	Install dependencies	2026-04-29T06:28:35.5266796Z Collecting pyrfc3339 (from acme==5.4.0->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.5335212Z   Downloading pyrfc3339-2.1.0-py3-none-any.whl.metadata (2.8 kB)
+tests	Install dependencies	2026-04-29T06:28:35.7327107Z Collecting habluetooth>=3.0 (from home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.7410549Z   Downloading habluetooth-6.1.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.4 kB)
+tests	Install dependencies	2026-04-29T06:28:35.7629837Z Collecting anyio (from httpx==0.28.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.7702292Z   Downloading anyio-4.13.0-py3-none-any.whl.metadata (4.5 kB)
+tests	Install dependencies	2026-04-29T06:28:35.7888300Z Collecting httpcore==1.* (from httpx==0.28.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.7958226Z   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+tests	Install dependencies	2026-04-29T06:28:35.8492913Z Collecting MarkupSafe>=2.0 (from Jinja2==3.1.6->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.8565536Z   Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+tests	Install dependencies	2026-04-29T06:28:35.8727658Z Collecting boolean.py>=4.0 (from license-expression==30.4.3->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.8798292Z   Downloading boolean_py-5.0-py3-none-any.whl.metadata (2.3 kB)
+tests	Install dependencies	2026-04-29T06:28:35.8903247Z Requirement already satisfied: pip>=24.2 in /opt/hostedtoolcache/Python/3.14.4/x64/lib/python3.14/site-packages (from pipdeptree==2.26.1->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4)) (26.1)
+tests	Install dependencies	2026-04-29T06:28:35.9568430Z Collecting psutil (from psutil-home-assistant==0.0.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:35.9642632Z   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+tests	Install dependencies	2026-04-29T06:28:36.1891635Z Collecting boto3>=1.10.49 (from pycognito==2024.5.1->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.1967153Z   Downloading boto3-1.42.97-py3-none-any.whl.metadata (6.7 kB)
+tests	Install dependencies	2026-04-29T06:28:36.2129750Z Collecting envs>=1.3 (from pycognito==2024.5.1->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.2215822Z   Downloading envs-1.4-py3-none-any.whl.metadata (842 bytes)
+tests	Install dependencies	2026-04-29T06:28:36.2623471Z Collecting execnet>=2.1 (from pytest-xdist==3.8.0->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.2693025Z   Downloading execnet-2.1.2-py3-none-any.whl.metadata (2.9 kB)
+tests	Install dependencies	2026-04-29T06:28:36.2866675Z Collecting text-unidecode>=1.3 (from python-slugify==8.0.4->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.2936838Z   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+tests	Install dependencies	2026-04-29T06:28:36.3249064Z Collecting PyNaCl (from securetar==2026.4.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.3321299Z   Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl.metadata (10.0 kB)
+tests	Install dependencies	2026-04-29T06:28:36.3543038Z Collecting standard-chunk (from standard-aifc==3.13.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.3618752Z   Downloading standard_chunk-3.13.0-py3-none-any.whl.metadata (860 bytes)
+tests	Install dependencies	2026-04-29T06:28:36.3908905Z Collecting h11>=0.16 (from httpcore==1.*->httpx==0.28.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.3978995Z   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+tests	Install dependencies	2026-04-29T06:28:36.7602402Z Collecting regex>=2024.11.6 (from sentence-stream<2,>=1.2.0->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:36.7673697Z   Downloading regex-2026.4.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+tests	Install dependencies	2026-04-29T06:28:36.7905185Z Collecting mypy_extensions>=1.0.0 (from mypy>=1.15.0->-r requirements-dev.txt (line 8))
+tests	Install dependencies	2026-04-29T06:28:36.7973609Z   Downloading mypy_extensions-1.1.0-py3-none-any.whl.metadata (1.1 kB)
+tests	Install dependencies	2026-04-29T06:28:36.8123779Z Collecting pathspec>=1.0.0 (from mypy>=1.15.0->-r requirements-dev.txt (line 8))
+tests	Install dependencies	2026-04-29T06:28:36.8196060Z   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+tests	Install dependencies	2026-04-29T06:28:36.9185580Z Collecting librt>=0.8.0 (from mypy>=1.15.0->-r requirements-dev.txt (line 8))
+tests	Install dependencies	2026-04-29T06:28:36.9263855Z   Downloading librt-0.9.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (1.3 kB)
+tests	Install dependencies	2026-04-29T06:28:36.9470221Z Collecting click>=8.0.0 (from mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:36.9540516Z   Downloading click-8.3.3-py3-none-any.whl.metadata (2.6 kB)
+tests	Install dependencies	2026-04-29T06:28:37.0155476Z Collecting libcst>=1.8.5 (from mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:37.0235630Z   Downloading libcst-1.8.6-cp314-cp314-manylinux_2_28_x86_64.whl.metadata (15 kB)
+tests	Install dependencies	2026-04-29T06:28:37.0724829Z Collecting setproctitle>=1.1.0 (from mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:37.0807787Z   Downloading setproctitle-1.3.7-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:37.1179759Z Collecting textual>=1.0.0 (from mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:37.1251586Z   Downloading textual-8.2.4-py3-none-any.whl.metadata (9.1 kB)
+tests	Install dependencies	2026-04-29T06:28:37.1514319Z Collecting CacheControl>=0.13.0 (from CacheControl[filecache]>=0.13.0->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.1586179Z   Downloading cachecontrol-0.14.4-py3-none-any.whl.metadata (3.1 kB)
+tests	Install dependencies	2026-04-29T06:28:37.1885036Z Collecting cyclonedx-python-lib<12,>=5 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.1957344Z   Downloading cyclonedx_python_lib-11.7.0-py3-none-any.whl.metadata (6.8 kB)
+tests	Install dependencies	2026-04-29T06:28:37.2146066Z Collecting pip-api>=0.0.28 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.2216470Z   Downloading pip_api-0.0.34-py3-none-any.whl.metadata (6.6 kB)
+tests	Install dependencies	2026-04-29T06:28:37.2352691Z Collecting pip-requirements-parser>=32.0.0 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.2426073Z   Downloading pip_requirements_parser-32.0.1-py3-none-any.whl.metadata (9.3 kB)
+tests	Install dependencies	2026-04-29T06:28:37.2753458Z Collecting rich>=12.4 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.2825709Z   Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+tests	Install dependencies	2026-04-29T06:28:37.3236776Z Collecting tomli>=2.2.1 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.3323015Z   Downloading tomli-2.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:37.3530268Z Collecting tomli-w>=1.2.0 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.3598775Z   Downloading tomli_w-1.2.0-py3-none-any.whl.metadata (5.7 kB)
+tests	Install dependencies	2026-04-29T06:28:37.3786569Z Collecting platformdirs>=4.2.0 (from pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.3881937Z   Downloading platformdirs-4.9.6-py3-none-any.whl.metadata (4.7 kB)
+tests	Install dependencies	2026-04-29T06:28:37.4121299Z Collecting packageurl-python<2,>=0.11 (from cyclonedx-python-lib<12,>=5->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.4192766Z   Downloading packageurl_python-0.17.6-py3-none-any.whl.metadata (5.1 kB)
+tests	Install dependencies	2026-04-29T06:28:37.4379599Z Collecting py-serializable<3.0.0,>=2.1.0 (from cyclonedx-python-lib<12,>=5->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.4452310Z   Downloading py_serializable-2.1.0-py3-none-any.whl.metadata (4.3 kB)
+tests	Install dependencies	2026-04-29T06:28:37.4615865Z Collecting sortedcontainers<3.0.0,>=2.4.0 (from cyclonedx-python-lib<12,>=5->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.4684235Z   Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:37.4865908Z Collecting defusedxml<0.8.0,>=0.7.1 (from py-serializable<3.0.0,>=2.1.0->cyclonedx-python-lib<12,>=5->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.4935249Z   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
+tests	Install dependencies	2026-04-29T06:28:37.5169677Z Collecting build>=1.0.0 (from pip-tools>=7.0.0->-r requirements-dev.txt (line 12))
+tests	Install dependencies	2026-04-29T06:28:37.5251391Z   Downloading build-1.4.4-py3-none-any.whl.metadata (5.8 kB)
+tests	Install dependencies	2026-04-29T06:28:37.5404660Z Collecting pyproject_hooks (from pip-tools>=7.0.0->-r requirements-dev.txt (line 12))
+tests	Install dependencies	2026-04-29T06:28:37.5474535Z   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+tests	Install dependencies	2026-04-29T06:28:37.5544744Z Requirement already satisfied: setuptools in /opt/hostedtoolcache/Python/3.14.4/x64/lib/python3.14/site-packages (from pip-tools>=7.0.0->-r requirements-dev.txt (line 12)) (82.0.1)
+tests	Install dependencies	2026-04-29T06:28:37.5548594Z Requirement already satisfied: wheel in /opt/hostedtoolcache/Python/3.14.4/x64/lib/python3.14/site-packages (from pip-tools>=7.0.0->-r requirements-dev.txt (line 12)) (0.47.0)
+tests	Install dependencies	2026-04-29T06:28:37.8016979Z Collecting botocore<1.43.0,>=1.42.97 (from boto3>=1.10.49->pycognito==2024.5.1->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:37.8091512Z   Downloading botocore-1.42.97-py3-none-any.whl.metadata (5.9 kB)
+tests	Install dependencies	2026-04-29T06:28:37.8250186Z Collecting jmespath<2.0.0,>=0.7.1 (from boto3>=1.10.49->pycognito==2024.5.1->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:37.8321680Z   Downloading jmespath-1.1.0-py3-none-any.whl.metadata (7.6 kB)
+tests	Install dependencies	2026-04-29T06:28:37.8507214Z Collecting s3transfer<0.17.0,>=0.16.0 (from boto3>=1.10.49->pycognito==2024.5.1->hass-nabucasa==2.2.0->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:37.8581670Z   Downloading s3transfer-0.16.1-py3-none-any.whl.metadata (1.7 kB)
+tests	Install dependencies	2026-04-29T06:28:37.8812378Z Collecting six>=1.5 (from python-dateutil>=2.7->freezegun==1.5.2->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:37.8882070Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+tests	Install dependencies	2026-04-29T06:28:37.9696361Z Collecting msgpack<2.0.0,>=0.5.2 (from CacheControl>=0.13.0->CacheControl[filecache]>=0.13.0->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:37.9768882Z   Downloading msgpack-1.1.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.1 kB)
+tests	Install dependencies	2026-04-29T06:28:38.0033570Z Collecting filelock>=3.8.0 (from CacheControl[filecache]>=0.13.0->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:38.0105227Z   Downloading filelock-3.29.0-py3-none-any.whl.metadata (2.0 kB)
+tests	Install dependencies	2026-04-29T06:28:38.0277466Z Collecting pycparser (from cffi>=2.0.0->cryptography==46.0.7->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.0347265Z   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+tests	Install dependencies	2026-04-29T06:28:38.0635785Z Collecting bleak>=1.0.1 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.0711925Z   Downloading bleak-3.0.1-py3-none-any.whl.metadata (5.2 kB)
+tests	Install dependencies	2026-04-29T06:28:38.0966909Z Collecting bleak-retry-connector>=4.2.0 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.1049357Z   Downloading bleak_retry_connector-4.6.0-py3-none-any.whl.metadata (7.3 kB)
+tests	Install dependencies	2026-04-29T06:28:38.1266054Z Collecting bluetooth-adapters>=2.1.0 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.1377134Z   Downloading bluetooth_adapters-2.1.1-py3-none-any.whl.metadata (5.3 kB)
+tests	Install dependencies	2026-04-29T06:28:38.1576127Z Collecting bluetooth-auto-recovery>=1.5.1 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.1656001Z   Downloading bluetooth_auto_recovery-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+tests	Install dependencies	2026-04-29T06:28:38.2468620Z Collecting bluetooth-data-tools>=1.28.0 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.2556481Z   Downloading bluetooth_data_tools-1.28.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.2 kB)
+tests	Install dependencies	2026-04-29T06:28:38.2706929Z Collecting btsocket>=0.3.0 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.2782956Z   Downloading btsocket-0.3.0-py2.py3-none-any.whl.metadata (7.0 kB)
+tests	Install dependencies	2026-04-29T06:28:38.5484924Z Collecting dbus-fast>=2.30.2 (from habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.5573012Z   Downloading dbus_fast-4.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+tests	Install dependencies	2026-04-29T06:28:38.5850193Z Collecting aiooui>=0.1.1 (from bluetooth-adapters>=2.1.0->habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.5996503Z   Downloading aiooui-0.1.9-py3-none-any.whl.metadata (4.1 kB)
+tests	Install dependencies	2026-04-29T06:28:38.6176010Z Collecting uart-devices>=0.1.0 (from bluetooth-adapters>=2.1.0->habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.6254208Z   Downloading uart_devices-0.1.1-py3-none-any.whl.metadata (4.9 kB)
+tests	Install dependencies	2026-04-29T06:28:38.6406777Z Collecting usb-devices>=0.4.5 (from bluetooth-adapters>=2.1.0->habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.6484743Z   Downloading usb_devices-0.4.5-py3-none-any.whl.metadata (5.3 kB)
+tests	Install dependencies	2026-04-29T06:28:38.6658997Z Collecting PyRIC>=0.1.6.3 (from bluetooth-auto-recovery>=1.5.1->habluetooth>=3.0->home-assistant-bluetooth==1.13.1->homeassistant==2026.4.4->pytest-homeassistant-custom-component==0.13.325->-r requirements-dev.txt (line 4))
+tests	Install dependencies	2026-04-29T06:28:38.6752728Z   Downloading PyRIC-0.1.6.3.tar.gz (870 kB)
+tests	Install dependencies	2026-04-29T06:28:38.7327400Z      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 870.4/870.4 kB 15.9 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:38.7556709Z   Installing build dependencies: started
+tests	Install dependencies	2026-04-29T06:28:39.3883651Z   Installing build dependencies: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:39.3889649Z   Getting requirements to build wheel: started
+tests	Install dependencies	2026-04-29T06:28:39.7885860Z   Getting requirements to build wheel: finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:39.7894171Z   Preparing metadata (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:39.9889320Z   Preparing metadata (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:40.0350964Z Collecting pyparsing (from pip-requirements-parser>=32.0.0->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:40.0423489Z   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+tests	Install dependencies	2026-04-29T06:28:40.0695728Z Collecting markdown-it-py>=2.2.0 (from rich>=12.4->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:40.0766069Z   Downloading markdown_it_py-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+tests	Install dependencies	2026-04-29T06:28:40.0971092Z Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=12.4->pip-audit>=2.7.0->-r requirements-dev.txt (line 10))
+tests	Install dependencies	2026-04-29T06:28:40.1041002Z   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+tests	Install dependencies	2026-04-29T06:28:40.1272968Z Collecting mdit-py-plugins (from textual>=1.0.0->mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:40.1343259Z   Downloading mdit_py_plugins-0.5.0-py3-none-any.whl.metadata (2.8 kB)
+tests	Install dependencies	2026-04-29T06:28:40.1571016Z Collecting linkify-it-py<3,>=1 (from markdown-it-py[linkify]>=2.1.0->textual>=1.0.0->mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:40.1641729Z   Downloading linkify_it_py-2.1.0-py3-none-any.whl.metadata (8.5 kB)
+tests	Install dependencies	2026-04-29T06:28:40.1813220Z Collecting uc-micro-py (from linkify-it-py<3,>=1->markdown-it-py[linkify]>=2.1.0->textual>=1.0.0->mutmut>=3.0.0->-r requirements-dev.txt (line 9))
+tests	Install dependencies	2026-04-29T06:28:40.1882139Z   Downloading uc_micro_py-2.0.0-py3-none-any.whl.metadata (2.2 kB)
+tests	Install dependencies	2026-04-29T06:28:40.2327403Z Downloading aiohttp-3.13.5-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.7 MB)
+tests	Install dependencies	2026-04-29T06:28:40.2995930Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.7/1.7 MB 27.6 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:40.3069907Z Downloading pydantic-2.12.2-py3-none-any.whl (460 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3272401Z Downloading pytest-9.0.0-py3-none-any.whl (373 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3444955Z Downloading pytest_asyncio-1.3.0-py3-none-any.whl (15 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3544639Z Downloading pytest_homeassistant_custom_component-0.13.325-py3-none-any.whl (75 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3653920Z Downloading syrupy-5.0.0-py3-none-any.whl (49 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3865758Z Downloading aiohasupervisor-0.4.3-py3-none-any.whl (42 kB)
+tests	Install dependencies	2026-04-29T06:28:40.3973388Z Downloading coverage-7.10.6-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (251 kB)
+tests	Install dependencies	2026-04-29T06:28:40.4118712Z Downloading freezegun-1.5.2-py3-none-any.whl (18 kB)
+tests	Install dependencies	2026-04-29T06:28:40.4233317Z Downloading homeassistant-2026.4.4-py3-none-any.whl (53.5 MB)
+tests	Install dependencies	2026-04-29T06:28:40.7709734Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.5/53.5 MB 156.4 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:40.7794288Z Downloading orjson-3.11.7-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (133 kB)
+tests	Install dependencies	2026-04-29T06:28:40.7889245Z Downloading yarl-1.23.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (101 kB)
+tests	Install dependencies	2026-04-29T06:28:40.7980663Z Downloading aiodns-4.0.0-py3-none-any.whl (11 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8084281Z Downloading aiogithubapi-26.0.0-py3-none-any.whl (72 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8181561Z Downloading aiohttp_asyncmdnsresolver-0.1.1-py3-none-any.whl (13 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8273723Z Downloading aiohttp_cors-0.8.1-py3-none-any.whl (25 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8363794Z Downloading aiohttp_fast_zlib-0.3.0-py3-none-any.whl (8.6 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8452922Z Downloading aiozoneinfo-0.2.3-py3-none-any.whl (8.0 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8557016Z Downloading annotatedyaml-1.0.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (71 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8653162Z Downloading astral-2.2-py2.py3-none-any.whl (30 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8742580Z Downloading async_interrupt-1.2.2-py3-none-any.whl (8.9 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8830371Z Downloading atomicwrites_homeassistant-1.4.1-py2.py3-none-any.whl (7.1 kB)
+tests	Install dependencies	2026-04-29T06:28:40.8918428Z Downloading attrs-25.4.0-py3-none-any.whl (67 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9013812Z Downloading audioop_lts-0.2.1-cp313-abi3-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (82 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9105537Z Downloading awesomeversion-25.8.0-py3-none-any.whl (15 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9196356Z Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9309259Z Downloading ciso8601-2.3.3-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (41 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9399698Z Downloading cronsim-2.7-py3-none-any.whl (14 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9489386Z Downloading cryptography-46.0.7-cp311-abi3-manylinux_2_34_x86_64.whl (4.5 MB)
+tests	Install dependencies	2026-04-29T06:28:40.9657081Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 291.7 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:40.9744399Z Downloading hass_nabucasa-2.2.0-py3-none-any.whl (90 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9838684Z Downloading requests-2.33.1-py3-none-any.whl (64 kB)
+tests	Install dependencies	2026-04-29T06:28:40.9927134Z Downloading webrtc_models-0.3.0-py3-none-any.whl (7.5 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0140052Z Downloading acme-5.4.0-py3-none-any.whl (94 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0244788Z Downloading home_assistant_bluetooth-1.13.1-py3-none-any.whl (7.9 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0331300Z Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0422851Z Downloading ifaddr-0.2.0-py3-none-any.whl (12 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0542172Z Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0653526Z Downloading license_expression-30.4.3-py3-none-any.whl (117 kB)
+tests	Install dependencies	2026-04-29T06:28:41.0775340Z Downloading numpy-2.3.2-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.6 MB)
+tests	Install dependencies	2026-04-29T06:28:41.1563531Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.6/16.6 MB 214.7 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.1640114Z Downloading paho_mqtt-2.1.0-py3-none-any.whl (67 kB)
+tests	Install dependencies	2026-04-29T06:28:41.1734010Z Downloading pillow-12.2.0-cp314-cp314-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+tests	Install dependencies	2026-04-29T06:28:41.2085696Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 208.4 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.2164024Z Downloading pipdeptree-2.26.1-py3-none-any.whl (32 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2255348Z Downloading propcache-0.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (201 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2347869Z Downloading psutil_home_assistant-0.0.1-py3-none-any.whl (6.3 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2432897Z Downloading pycognito-2024.5.1-py3-none-any.whl (26 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2547733Z Downloading pydantic_core-2.41.4-cp314-cp314-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+tests	Install dependencies	2026-04-29T06:28:41.2652375Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 220.8 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.2723866Z Downloading PyJWT-2.10.1-py3-none-any.whl (22 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2818911Z Downloading pylint_per_file_ignores-1.4.0-py3-none-any.whl (4.9 kB)
+tests	Install dependencies	2026-04-29T06:28:41.2907467Z Downloading pyopenssl-26.0.0-py3-none-any.whl (57 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3000593Z Downloading pytest_aiohttp-1.1.0-py3-none-any.whl (8.9 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3089991Z Downloading pytest_cov-7.0.0-py3-none-any.whl (22 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3176646Z Downloading pytest_freezer-0.4.9-py3-none-any.whl (3.2 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3262628Z Downloading pytest_github_actions_annotate_failures-0.3.0-py3-none-any.whl (6.0 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3382219Z Downloading pytest_picked-0.5.1-py3-none-any.whl (6.6 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3469447Z Downloading pytest_socket-0.7.0-py3-none-any.whl (6.8 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3559859Z Downloading pytest_timeout-2.4.0-py3-none-any.whl (14 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3650003Z Downloading pytest_unordered-0.7.0-py3-none-any.whl (6.2 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3783689Z Downloading pytest_xdist-3.8.0-py3-none-any.whl (46 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3882251Z Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+tests	Install dependencies	2026-04-29T06:28:41.3977804Z Downloading pyyaml-6.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (794 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4033439Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 794.2/794.2 kB 158.0 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.4104624Z Downloading requests_mock-1.12.1-py2.py3-none-any.whl (27 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4195065Z Downloading respx-0.22.0-py2.py3-none-any.whl (25 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4289263Z Downloading securetar-2026.4.0-py3-none-any.whl (19 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4385970Z Downloading snitun-0.45.1-py3-none-any.whl (51 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4497253Z Downloading sqlalchemy-2.0.41-py3-none-any.whl (1.9 MB)
+tests	Install dependencies	2026-04-29T06:28:41.4596917Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 219.7 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.4668325Z Downloading standard_aifc-3.13.0-py3-none-any.whl (10 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4762870Z Downloading standard_telnetlib-3.13.0-py3-none-any.whl (10.0 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4858242Z Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+tests	Install dependencies	2026-04-29T06:28:41.4970361Z Downloading ulid_transform-2.2.0-cp314-cp314-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (24 kB)
+tests	Install dependencies	2026-04-29T06:28:41.5061169Z Downloading uv-0.11.6-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (25.0 MB)
+tests	Install dependencies	2026-04-29T06:28:41.6416385Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 25.0/25.0 MB 186.4 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.6489549Z Downloading voluptuous-0.15.2-py3-none-any.whl (31 kB)
+tests	Install dependencies	2026-04-29T06:28:41.6596005Z Downloading voluptuous_openapi-0.2.0-py3-none-any.whl (10 kB)
+tests	Install dependencies	2026-04-29T06:28:41.6692700Z Downloading voluptuous_serialize-2.7.0-py3-none-any.whl (7.8 kB)
+tests	Install dependencies	2026-04-29T06:28:41.6811067Z Downloading zeroconf-0.148.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (2.2 MB)
+tests	Install dependencies	2026-04-29T06:28:41.6912138Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 252.2 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.6983157Z Downloading backoff-2.2.1-py3-none-any.whl (15 kB)
+tests	Install dependencies	2026-04-29T06:28:41.7075968Z Downloading charset_normalizer-3.4.7-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (215 kB)
+tests	Install dependencies	2026-04-29T06:28:41.7169716Z Downloading fnvhash-0.2.1-py3-none-any.whl (18 kB)
+tests	Install dependencies	2026-04-29T06:28:41.7280232Z Downloading grpcio-1.80.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (6.8 MB)
+tests	Install dependencies	2026-04-29T06:28:41.7763230Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.8/6.8 MB 142.5 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.7837509Z Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+tests	Install dependencies	2026-04-29T06:28:41.7939922Z Downloading icmplib-3.0.4-py3-none-any.whl (30 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8035125Z Downloading idna-3.13-py3-none-any.whl (68 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8129681Z Downloading josepy-2.2.0-py3-none-any.whl (29 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8224903Z Downloading mashumaro-3.20-py3-none-any.whl (94 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8320750Z Downloading multidict-6.7.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (248 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8432857Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8530057Z Downloading pycares-5.0.1-cp314-cp314-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (223 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8628016Z Downloading sentence_stream-1.3.0-py3-none-any.whl (8.7 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8720035Z Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8813399Z Downloading urllib3-2.6.3-py3-none-any.whl (131 kB)
+tests	Install dependencies	2026-04-29T06:28:41.8907365Z Downloading aioresponses-0.7.8-py2.py3-none-any.whl (12 kB)
+tests	Install dependencies	2026-04-29T06:28:41.9000347Z Downloading ruff-0.15.12-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.3 MB)
+tests	Install dependencies	2026-04-29T06:28:41.9361226Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 330.0 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:41.9436388Z Downloading mypy-1.20.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (14.7 MB)
+tests	Install dependencies	2026-04-29T06:28:42.0382307Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.7/14.7 MB 158.0 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.0458011Z Downloading mutmut-3.5.0-py3-none-any.whl (34 kB)
+tests	Install dependencies	2026-04-29T06:28:42.0554309Z Downloading pip_audit-2.10.0-py3-none-any.whl (61 kB)
+tests	Install dependencies	2026-04-29T06:28:42.0655270Z Downloading cyclonedx_python_lib-11.7.0-py3-none-any.whl (513 kB)
+tests	Install dependencies	2026-04-29T06:28:42.0764296Z Downloading packageurl_python-0.17.6-py3-none-any.whl (36 kB)
+tests	Install dependencies	2026-04-29T06:28:42.0857586Z Downloading py_serializable-2.1.0-py3-none-any.whl (23 kB)
+tests	Install dependencies	2026-04-29T06:28:42.0953062Z Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1044169Z Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1134214Z Downloading types_pyyaml-6.0.12.20260408-py3-none-any.whl (20 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1225116Z Downloading pip_tools-7.5.3-py3-none-any.whl (71 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1321588Z Downloading aiohappyeyeballs-2.6.1-py3-none-any.whl (15 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1439565Z Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1528077Z Downloading annotated_types-0.7.0-py3-none-any.whl (13 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1617553Z Downloading boolean_py-5.0-py3-none-any.whl (26 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1706531Z Downloading boto3-1.42.97-py3-none-any.whl (140 kB)
+tests	Install dependencies	2026-04-29T06:28:42.1804068Z Downloading botocore-1.42.97-py3-none-any.whl (15.0 MB)
+tests	Install dependencies	2026-04-29T06:28:42.2266889Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 15.0/15.0 MB 339.7 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.2340141Z Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2436461Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2548537Z Downloading s3transfer-0.16.1-py3-none-any.whl (86 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2643181Z Downloading build-1.4.4-py3-none-any.whl (25 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2735694Z Downloading cachecontrol-0.14.4-py3-none-any.whl (22 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2837303Z Downloading msgpack-1.1.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (419 kB)
+tests	Install dependencies	2026-04-29T06:28:42.2938790Z Downloading certifi-2026.4.22-py3-none-any.whl (135 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3037162Z Downloading cffi-2.0.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (219 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3131718Z Downloading click-8.3.3-py3-none-any.whl (110 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3222646Z Downloading envs-1.4-py3-none-any.whl (10 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3314493Z Downloading execnet-2.1.2-py3-none-any.whl (40 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3410865Z Downloading filelock-3.29.0-py3-none-any.whl (39 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3504055Z Downloading frozenlist-1.8.0-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3599260Z Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3831134Z Downloading habluetooth-6.1.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (719 kB)
+tests	Install dependencies	2026-04-29T06:28:42.3891046Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 719.0/719.0 kB 131.7 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.3980769Z Downloading bleak-3.0.1-py3-none-any.whl (144 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4077225Z Downloading bleak_retry_connector-4.6.0-py3-none-any.whl (18 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4179077Z Downloading bluetooth_adapters-2.1.1-py3-none-any.whl (20 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4282105Z Downloading aiooui-0.1.9-py3-none-any.whl (367 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4381059Z Downloading bluetooth_auto_recovery-1.5.3-py3-none-any.whl (11 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4492275Z Downloading bluetooth_data_tools-1.28.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (412 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4595452Z Downloading btsocket-0.3.0-py2.py3-none-any.whl (14 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4719365Z Downloading dbus_fast-4.0.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (846 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4778330Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 160.8 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.4849980Z Downloading iniconfig-2.3.0-py3-none-any.whl (7.5 kB)
+tests	Install dependencies	2026-04-29T06:28:42.4945764Z Downloading libcst-1.8.6-cp314-cp314-manylinux_2_28_x86_64.whl (2.3 MB)
+tests	Install dependencies	2026-04-29T06:28:42.5093380Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 167.3 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.5165733Z Downloading librt-0.9.0-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (227 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5267719Z Downloading markupsafe-3.0.3-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5364856Z Downloading mypy_extensions-1.1.0-py3-none-any.whl (5.0 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5457397Z Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5575479Z Downloading pip_api-0.0.34-py3-none-any.whl (120 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5695715Z Downloading pip_requirements_parser-32.0.1-py3-none-any.whl (35 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5799584Z Downloading platformdirs-4.9.6-py3-none-any.whl (21 kB)
+tests	Install dependencies	2026-04-29T06:28:42.5900219Z Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+tests	Install dependencies	2026-04-29T06:28:42.5997801Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 137.0 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.6072560Z Downloading regex-2026.4.4-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (800 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6129042Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 800.6/800.6 kB 155.2 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.6201646Z Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6310807Z Downloading markdown_it_py-4.0.0-py3-none-any.whl (87 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6429810Z Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6533323Z Downloading setproctitle-1.3.7-cp314-cp314-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (33 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6626396Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6717179Z Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6809853Z Downloading textual-8.2.4-py3-none-any.whl (724 kB)
+tests	Install dependencies	2026-04-29T06:28:42.6923770Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 724.4/724.4 kB 66.3 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.6995583Z Downloading linkify_it_py-2.1.0-py3-none-any.whl (19 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7087521Z Downloading tomli-2.4.1-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (252 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7210543Z Downloading tomli_w-1.2.0-py3-none-any.whl (6.7 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7300790Z Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7391217Z Downloading tzdata-2026.2-py2.py3-none-any.whl (349 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7500750Z Downloading uart_devices-0.1.1-py3-none-any.whl (4.8 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7611178Z Downloading usb_devices-0.4.5-py3-none-any.whl (5.3 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7711260Z Downloading anyio-4.13.0-py3-none-any.whl (114 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7810358Z Downloading mdit_py_plugins-0.5.0-py3-none-any.whl (57 kB)
+tests	Install dependencies	2026-04-29T06:28:42.7907585Z Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+tests	Install dependencies	2026-04-29T06:28:42.8003940Z Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+tests	Install dependencies	2026-04-29T06:28:42.8128726Z Downloading pynacl-1.6.2-cp38-abi3-manylinux_2_34_x86_64.whl (1.4 MB)
+tests	Install dependencies	2026-04-29T06:28:42.8206829Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 228.3 MB/s  0:00:00
+tests	Install dependencies	2026-04-29T06:28:42.8276410Z Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+tests	Install dependencies	2026-04-29T06:28:42.8594599Z Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+tests	Install dependencies	2026-04-29T06:28:43.0639055Z Downloading pyrfc3339-2.1.0-py3-none-any.whl (6.8 kB)
+tests	Install dependencies	2026-04-29T06:28:43.0754613Z Downloading pytz-2026.1.post1-py2.py3-none-any.whl (510 kB)
+tests	Install dependencies	2026-04-29T06:28:43.0856920Z Downloading standard_chunk-3.13.0-py3-none-any.whl (4.9 kB)
+tests	Install dependencies	2026-04-29T06:28:43.0950926Z Downloading uc_micro_py-2.0.0-py3-none-any.whl (6.4 kB)
+tests	Install dependencies	2026-04-29T06:28:43.5840535Z Building wheels for collected packages: fnv-hash-fast, lru-dict, mock-open, PyRIC
+tests	Install dependencies	2026-04-29T06:28:43.5847396Z   Building wheel for fnv-hash-fast (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:44.8390486Z   Building wheel for fnv-hash-fast (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:44.8396002Z   Created wheel for fnv-hash-fast: filename=fnv_hash_fast-2.0.0-cp314-cp314-manylinux_2_39_x86_64.whl size=7884 sha256=f76466a465d960db4b1cfcf6c4421941780aafce66347276f582fb24df669d0e
+tests	Install dependencies	2026-04-29T06:28:44.8397603Z   Stored in directory: /home/runner/.cache/pip/wheels/9e/16/e6/b073f9e3dcd3ba18da1f6d20894622a0823b6e9dbeb14d4a39
+tests	Install dependencies	2026-04-29T06:28:44.8421353Z   Building wheel for lru-dict (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:45.3789722Z   Building wheel for lru-dict (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:45.3795584Z   Created wheel for lru-dict: filename=lru_dict-1.3.0-cp314-cp314-linux_x86_64.whl size=31933 sha256=9328a908b3c1cf69bb908681bcc68ea83d0afd271a17bbd0d2c54d0659d046ed
+tests	Install dependencies	2026-04-29T06:28:45.3797099Z   Stored in directory: /home/runner/.cache/pip/wheels/0a/6e/0d/705aea7931b030f79bd381cc7c9705f7933b985dd7a75d46b2
+tests	Install dependencies	2026-04-29T06:28:45.3821592Z   Building wheel for mock-open (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:45.6547202Z   Building wheel for mock-open (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:45.6553619Z   Created wheel for mock-open: filename=mock_open-1.4.0-py3-none-any.whl size=14642 sha256=7df1fa93cfc9f3c7f16cfc8eda3861112aeba70a982ba062c14fdd2bf83a25c6
+tests	Install dependencies	2026-04-29T06:28:45.6555878Z   Stored in directory: /home/runner/.cache/pip/wheels/81/4c/ec/720cfec24c11d15ed44f15f87bf4dadd0b7cd6807cef1da374
+tests	Install dependencies	2026-04-29T06:28:45.6579369Z   Building wheel for PyRIC (pyproject.toml): started
+tests	Install dependencies	2026-04-29T06:28:45.9762173Z   Building wheel for PyRIC (pyproject.toml): finished with status 'done'
+tests	Install dependencies	2026-04-29T06:28:45.9771665Z   Created wheel for PyRIC: filename=pyric-0.1.6.3-py2.py3-none-any.whl size=407977 sha256=d49a061fe89f1f3f2bee1948d9c9cd3901f42d1d3f62abd52112588f57b0d2c1
+tests	Install dependencies	2026-04-29T06:28:45.9773348Z   Stored in directory: /home/runner/.cache/pip/wheels/2c/cf/02/36fd497a2f3c8c6d98b3b75cc8523b8bc38d611dde1a319a9a
+tests	Install dependencies	2026-04-29T06:28:45.9792783Z Successfully built fnv-hash-fast lru-dict mock-open PyRIC
+tests	Install dependencies	2026-04-29T06:28:46.4891108Z Installing collected packages: text-unidecode, standard-telnetlib, standard-chunk, sortedcontainers, pytz, PyRIC, mock-open, ifaddr, ciso8601, btsocket, boolean.py, zeroconf, voluptuous, uv, usb-devices, urllib3, ulid-transform, uc-micro-py, uart-devices, tzdata, typing-extensions, types-pyyaml, tqdm, tomli-w, tomli, six, setproctitle, ruff, regex, PyYAML, python-slugify, pyrfc3339, pyproject_hooks, pyparsing, pylint-per-file-ignores, PyJWT, pygments, pycparser, psutil, propcache, pluggy, platformdirs, pipdeptree, pip-api, Pillow, pathspec, paho-mqtt, packageurl-python, orjson, numpy, mypy_extensions, multidict, msgpack, mdurl, MarkupSafe, lru-dict, license-expression, librt, jmespath, iniconfig, idna, icmplib, h11, frozenlist, fnvhash, filelock, execnet, envs, defusedxml, dbus-fast, cronsim, coverage, click, charset_normalizer, certifi, bcrypt, backoff, awesomeversion, audioop-lts, attrs, atomicwrites-homeassistant, async-interrupt, astral, annotated-types, aiooui, aiohappyeyeballs, yarl, voluptuous-serialize, voluptuous-openapi, typing-inspection, standard-aifc, sqlalchemy, sentence-stream, requests, python-dateutil, pytest, pydantic-core, py-serializable, psutil-home-assistant, pip-requirements-parser, mypy, mashumaro, markdown-it-py, linkify-it-py, libcst, Jinja2, httpcore, grpcio, fnv-hash-fast, cffi, build, bleak, anyio, annotatedyaml, aiozoneinfo, aiosignal, webrtc-models, syrupy, rich, requests-mock, pytest-xdist, pytest-unordered, pytest-timeout, pytest-socket, pytest-picked, pytest-github-actions-annotate-failures, pytest-cov, pytest-asyncio, PyNaCl, pydantic, pycares, pip-tools, mdit-py-plugins, httpx, freezegun, cyclonedx-python-lib, cryptography, CacheControl, botocore, bluetooth-adapters, aiohttp, textual, snitun, securetar, s3transfer, respx, pytest-freezer, pytest-aiohttp, pyOpenSSL, josepy, bluetooth-data-tools, bluetooth-auto-recovery, bleak-retry-connector, aioresponses, aiohttp-fast-zlib, aiohttp_cors, aiohasupervisor, aiogithubapi, aiodns, pip-audit, mutmut, habluetooth, boto3, aiohttp-asyncmdnsresolver, acme, pycognito, home-assistant-bluetooth, hass-nabucasa, homeassistant, pytest-homeassistant-custom-component
+tests	Install dependencies	2026-04-29T06:29:25.0273491Z 
+tests	Install dependencies	2026-04-29T06:29:25.0421042Z Successfully installed CacheControl-0.14.4 Jinja2-3.1.6 MarkupSafe-3.0.3 Pillow-12.2.0 PyJWT-2.10.1 PyNaCl-1.6.2 PyRIC-0.1.6.3 PyYAML-6.0.3 acme-5.4.0 aiodns-4.0.0 aiogithubapi-26.0.0 aiohappyeyeballs-2.6.1 aiohasupervisor-0.4.3 aiohttp-3.13.5 aiohttp-asyncmdnsresolver-0.1.1 aiohttp-fast-zlib-0.3.0 aiohttp_cors-0.8.1 aiooui-0.1.9 aioresponses-0.7.8 aiosignal-1.4.0 aiozoneinfo-0.2.3 annotated-types-0.7.0 annotatedyaml-1.0.2 anyio-4.13.0 astral-2.2 async-interrupt-1.2.2 atomicwrites-homeassistant-1.4.1 attrs-25.4.0 audioop-lts-0.2.1 awesomeversion-25.8.0 backoff-2.2.1 bcrypt-5.0.0 bleak-3.0.1 bleak-retry-connector-4.6.0 bluetooth-adapters-2.1.1 bluetooth-auto-recovery-1.5.3 bluetooth-data-tools-1.28.4 boolean.py-5.0 boto3-1.42.97 botocore-1.42.97 btsocket-0.3.0 build-1.4.4 certifi-2026.4.22 cffi-2.0.0 charset_normalizer-3.4.7 ciso8601-2.3.3 click-8.3.3 coverage-7.10.6 cronsim-2.7 cryptography-46.0.7 cyclonedx-python-lib-11.7.0 dbus-fast-4.0.4 defusedxml-0.7.1 envs-1.4 execnet-2.1.2 filelock-3.29.0 fnv-hash-fast-2.0.0 fnvhash-0.2.1 freezegun-1.5.2 frozenlist-1.8.0 grpcio-1.80.0 h11-0.16.0 habluetooth-6.1.0 hass-nabucasa-2.2.0 home-assistant-bluetooth-1.13.1 homeassistant-2026.4.4 httpcore-1.0.9 httpx-0.28.1 icmplib-3.0.4 idna-3.13 ifaddr-0.2.0 iniconfig-2.3.0 jmespath-1.1.0 josepy-2.2.0 libcst-1.8.6 librt-0.9.0 license-expression-30.4.3 linkify-it-py-2.1.0 lru-dict-1.3.0 markdown-it-py-4.0.0 mashumaro-3.20 mdit-py-plugins-0.5.0 mdurl-0.1.2 mock-open-1.4.0 msgpack-1.1.2 multidict-6.7.1 mutmut-3.5.0 mypy-1.20.2 mypy_extensions-1.1.0 numpy-2.3.2 orjson-3.11.7 packageurl-python-0.17.6 paho-mqtt-2.1.0 pathspec-1.1.1 pip-api-0.0.34 pip-audit-2.10.0 pip-requirements-parser-32.0.1 pip-tools-7.5.3 pipdeptree-2.26.1 platformdirs-4.9.6 pluggy-1.6.0 propcache-0.4.1 psutil-7.2.2 psutil-home-assistant-0.0.1 py-serializable-2.1.0 pyOpenSSL-26.0.0 pycares-5.0.1 pycognito-2024.5.1 pycparser-3.0 pydantic-2.12.2 pydantic-core-2.41.4 pygments-2.20.0 pylint-per-file-ignores-1.4.0 pyparsing-3.3.2 pyproject_hooks-1.2.0 pyrfc3339-2.1.0 pytest-9.0.0 pytest-aiohttp-1.1.0 pytest-asyncio-1.3.0 pytest-cov-7.0.0 pytest-freezer-0.4.9 pytest-github-actions-annotate-failures-0.3.0 pytest-homeassistant-custom-component-0.13.325 pytest-picked-0.5.1 pytest-socket-0.7.0 pytest-timeout-2.4.0 pytest-unordered-0.7.0 pytest-xdist-3.8.0 python-dateutil-2.9.0.post0 python-slugify-8.0.4 pytz-2026.1.post1 regex-2026.4.4 requests-2.33.1 requests-mock-1.12.1 respx-0.22.0 rich-15.0.0 ruff-0.15.12 s3transfer-0.16.1 securetar-2026.4.0 sentence-stream-1.3.0 setproctitle-1.3.7 six-1.17.0 snitun-0.45.1 sortedcontainers-2.4.0 sqlalchemy-2.0.41 standard-aifc-3.13.0 standard-chunk-3.13.0 standard-telnetlib-3.13.0 syrupy-5.0.0 text-unidecode-1.3 textual-8.2.4 tomli-2.4.1 tomli-w-1.2.0 tqdm-4.67.1 types-pyyaml-6.0.12.20260408 typing-extensions-4.15.0 typing-inspection-0.4.2 tzdata-2026.2 uart-devices-0.1.1 uc-micro-py-2.0.0 ulid-transform-2.2.0 urllib3-2.6.3 usb-devices-0.4.5 uv-0.11.6 voluptuous-0.15.2 voluptuous-openapi-0.2.0 voluptuous-serialize-2.7.0 webrtc-models-0.3.0 yarl-1.23.0 zeroconf-0.148.0
+tests	Run tests with coverage	﻿2026-04-29T06:29:25.9556415Z ##[group]Run python -m pytest \
+tests	Run tests with coverage	2026-04-29T06:29:25.9556753Z [36;1mpython -m pytest \[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9556969Z [36;1m  tests/unit \[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9557162Z [36;1m  tests/ha \[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9557386Z [36;1m  --cov=custom_components/zurichsee_ha \[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9557937Z [36;1m  --cov-report=xml:coverage.xml \[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9558591Z [36;1m  --cov-report=term-missing[0m
+tests	Run tests with coverage	2026-04-29T06:29:25.9581477Z shell: /usr/bin/bash -e {0}
+tests	Run tests with coverage	2026-04-29T06:29:25.9581698Z env:
+tests	Run tests with coverage	2026-04-29T06:29:25.9581888Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+tests	Run tests with coverage	2026-04-29T06:29:25.9582205Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Run tests with coverage	2026-04-29T06:29:25.9582598Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib/pkgconfig
+tests	Run tests with coverage	2026-04-29T06:29:25.9582982Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Run tests with coverage	2026-04-29T06:29:25.9583326Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Run tests with coverage	2026-04-29T06:29:25.9583856Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Run tests with coverage	2026-04-29T06:29:25.9584243Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib
+tests	Run tests with coverage	2026-04-29T06:29:25.9584534Z ##[endgroup]
+tests	Run tests with coverage	2026-04-29T06:29:31.3671493Z ============================= test session starts ==============================
+tests	Run tests with coverage	2026-04-29T06:29:31.3672084Z platform linux -- Python 3.14.4, pytest-9.0.0, pluggy-1.6.0
+tests	Run tests with coverage	2026-04-29T06:29:31.3672523Z rootdir: /home/runner/work/zurichsee_ha/zurichsee_ha
+tests	Run tests with coverage	2026-04-29T06:29:31.3672875Z configfile: pytest.ini
+tests	Run tests with coverage	2026-04-29T06:29:31.3674124Z plugins: requests-mock-1.12.1, pytest_freezer-0.4.9, asyncio-1.3.0, aiohttp-1.1.0, timeout-2.4.0, syrupy-5.0.0, github-actions-annotate-failures-0.3.0, xdist-3.8.0, unordered-0.7.0, cov-7.0.0, respx-0.22.0, homeassistant-custom-component-0.13.325, socket-0.7.0, picked-0.5.1, anyio-4.13.0
+tests	Run tests with coverage	2026-04-29T06:29:31.3675804Z asyncio: mode=Mode.AUTO, debug=False, asyncio_default_fixture_loop_scope=function, asyncio_default_test_loop_scope=function
+tests	Run tests with coverage	2026-04-29T06:29:31.3676464Z collected 8 items
+tests	Run tests with coverage	2026-04-29T06:29:31.3676595Z 
+tests	Run tests with coverage	2026-04-29T06:29:31.5514423Z tests/unit/test_api.py ...                                               [ 37%]
+tests	Run tests with coverage	2026-04-29T06:29:31.5589655Z tests/unit/test_models.py ..                                             [ 62%]
+tests	Run tests with coverage	2026-04-29T06:29:31.5953117Z tests/ha/test_config_flow.py ..                                          [ 87%]
+tests	Run tests with coverage	2026-04-29T06:29:31.6984358Z tests/ha/test_sensor.py .                                                [100%]
+tests	Run tests with coverage	2026-04-29T06:29:31.6984927Z 
+tests	Run tests with coverage	2026-04-29T06:29:31.6985135Z ================================ tests coverage ================================
+tests	Run tests with coverage	2026-04-29T06:29:31.6985775Z _______________ coverage: platform linux, python 3.14.4-final-0 ________________
+tests	Run tests with coverage	2026-04-29T06:29:31.6986239Z 
+tests	Run tests with coverage	2026-04-29T06:29:31.6986435Z Name                                            Stmts   Miss  Cover   Missing
+tests	Run tests with coverage	2026-04-29T06:29:31.6987034Z -----------------------------------------------------------------------------
+tests	Run tests with coverage	2026-04-29T06:29:31.6987778Z custom_components/zurichsee_ha/__init__.py         28      1    96%   58
+tests	Run tests with coverage	2026-04-29T06:29:31.6989043Z custom_components/zurichsee_ha/api.py              59      6    90%   48, 59, 79-80, 85, 87
+tests	Run tests with coverage	2026-04-29T06:29:31.6989956Z custom_components/zurichsee_ha/config_flow.py      28      7    75%   62, 70, 74-93
+tests	Run tests with coverage	2026-04-29T06:29:31.6990531Z custom_components/zurichsee_ha/const.py            11      0   100%
+tests	Run tests with coverage	2026-04-29T06:29:31.6991063Z custom_components/zurichsee_ha/coordinator.py      24      2    92%   47-48
+tests	Run tests with coverage	2026-04-29T06:29:31.6991599Z custom_components/zurichsee_ha/entity.py           11      0   100%
+tests	Run tests with coverage	2026-04-29T06:29:31.6992097Z custom_components/zurichsee_ha/exceptions.py        2      0   100%
+tests	Run tests with coverage	2026-04-29T06:29:31.6992585Z custom_components/zurichsee_ha/models.py           30      0   100%
+tests	Run tests with coverage	2026-04-29T06:29:31.6993098Z custom_components/zurichsee_ha/sensor.py           36      1    97%   187
+tests	Run tests with coverage	2026-04-29T06:29:31.6993595Z -----------------------------------------------------------------------------
+tests	Run tests with coverage	2026-04-29T06:29:31.6994042Z TOTAL                                             229     17    93%
+tests	Run tests with coverage	2026-04-29T06:29:31.6994770Z Coverage XML written to file coverage.xml
+tests	Run tests with coverage	2026-04-29T06:29:31.6995164Z Required test coverage of 90.0% reached. Total coverage: 92.58%
+tests	Run tests with coverage	2026-04-29T06:29:31.6995614Z ============================== 8 passed in 0.41s ===============================
+tests	Upload coverage artifact	﻿2026-04-29T06:29:31.7837963Z ##[group]Run actions/upload-artifact@v4
+tests	Upload coverage artifact	2026-04-29T06:29:31.7839518Z with:
+tests	Upload coverage artifact	2026-04-29T06:29:31.7839691Z   name: coverage-report
+tests	Upload coverage artifact	2026-04-29T06:29:31.7839891Z   path: coverage.xml
+tests	Upload coverage artifact	2026-04-29T06:29:31.7840078Z   if-no-files-found: warn
+tests	Upload coverage artifact	2026-04-29T06:29:31.7840278Z   compression-level: 6
+tests	Upload coverage artifact	2026-04-29T06:29:31.7840463Z   overwrite: false
+tests	Upload coverage artifact	2026-04-29T06:29:31.7840655Z   include-hidden-files: false
+tests	Upload coverage artifact	2026-04-29T06:29:31.7840850Z env:
+tests	Upload coverage artifact	2026-04-29T06:29:31.7841027Z   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+tests	Upload coverage artifact	2026-04-29T06:29:31.7841341Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Upload coverage artifact	2026-04-29T06:29:31.7841924Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib/pkgconfig
+tests	Upload coverage artifact	2026-04-29T06:29:31.7842311Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Upload coverage artifact	2026-04-29T06:29:31.7842643Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Upload coverage artifact	2026-04-29T06:29:31.7842985Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.4/x64
+tests	Upload coverage artifact	2026-04-29T06:29:31.7843333Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.4/x64/lib
+tests	Upload coverage artifact	2026-04-29T06:29:31.7843656Z ##[endgroup]
+tests	Upload coverage artifact	2026-04-29T06:29:31.9645809Z (node:2564) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+tests	Upload coverage artifact	2026-04-29T06:29:31.9647048Z (Use `node --trace-deprecation ...` to show where the warning was created)
+tests	Upload coverage artifact	2026-04-29T06:29:31.9699743Z With the provided path, there will be 1 file uploaded
+tests	Upload coverage artifact	2026-04-29T06:29:31.9705416Z Artifact name is valid!
+tests	Upload coverage artifact	2026-04-29T06:29:31.9706248Z Root directory input is valid!
+tests	Upload coverage artifact	2026-04-29T06:29:32.0891839Z Beginning upload of artifact content to blob storage
+tests	Upload coverage artifact	2026-04-29T06:29:32.1080978Z (node:2564) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+tests	Upload coverage artifact	2026-04-29T06:29:32.1314104Z Uploaded bytes 1198
+tests	Upload coverage artifact	2026-04-29T06:29:32.1440178Z Finished uploading artifact content to blob storage!
+tests	Upload coverage artifact	2026-04-29T06:29:32.1441292Z SHA256 digest of uploaded artifact zip is af2158dc72186870b91d7e34e849a0c01afd8cd8aae2e5e71b5a92407e6978dd
+tests	Upload coverage artifact	2026-04-29T06:29:32.1442775Z Finalizing artifact upload
+tests	Upload coverage artifact	2026-04-29T06:29:32.2684759Z Artifact coverage-report.zip successfully finalized. Artifact ID 6700946246
+tests	Upload coverage artifact	2026-04-29T06:29:32.2686022Z Artifact coverage-report has been successfully uploaded! Final size is 1198 bytes. Artifact ID is 6700946246
+tests	Upload coverage artifact	2026-04-29T06:29:32.2693025Z Artifact download URL: https://github.com/derliebemarcus/zurichsee_ha/actions/runs/25094257667/artifacts/6700946246
+tests	Post Set up Python	﻿2026-04-29T06:29:32.2834111Z Post job cleanup.
+tests	Post Set up Python	2026-04-29T06:29:32.4103363Z (node:2576) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+tests	Post Set up Python	2026-04-29T06:29:32.4104297Z (Use `node --trace-deprecation ...` to show where the warning was created)
+tests	Post Set up Python	2026-04-29T06:29:32.4294663Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/zurichsee_ha/zurichsee_ha --files-from manifest.txt --use-compress-program zstdmt
+tests	Post Set up Python	2026-04-29T06:29:32.9439600Z (node:2576) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+tests	Post Set up Python	2026-04-29T06:29:33.9320954Z Sent 0 of 196059615 (0.0%), 0.0 MBs/sec
+tests	Post Set up Python	2026-04-29T06:29:34.2729449Z Sent 196059615 of 196059615 (100.0%), 139.4 MBs/sec
+tests	Post Set up Python	2026-04-29T06:29:34.4548636Z Cache saved with the key: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.4-pip-8a8cd1e07bff919c1904992a65e6bfc24c60e95d447a7c95e5e5ab3b65978a27
+tests	Post Check out repository	﻿2026-04-29T06:29:34.4708891Z Post job cleanup.
+tests	Post Check out repository	2026-04-29T06:29:34.5572040Z [command]/usr/bin/git version
+tests	Post Check out repository	2026-04-29T06:29:34.5611696Z git version 2.53.0
+tests	Post Check out repository	2026-04-29T06:29:34.5651913Z Temporarily overriding HOME='/home/runner/work/_temp/74a9f032-b19b-4f32-b23c-ebbb6d5107e4' before making global git config changes
+tests	Post Check out repository	2026-04-29T06:29:34.5653320Z Adding repository directory to the temporary git global config as a safe directory
+tests	Post Check out repository	2026-04-29T06:29:34.5658827Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/zurichsee_ha/zurichsee_ha
+tests	Post Check out repository	2026-04-29T06:29:34.5700880Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+tests	Post Check out repository	2026-04-29T06:29:34.5737959Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+tests	Post Check out repository	2026-04-29T06:29:34.5977957Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+tests	Post Check out repository	2026-04-29T06:29:34.6005337Z http.https://github.com/.extraheader
+tests	Post Check out repository	2026-04-29T06:29:34.6019044Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+tests	Post Check out repository	2026-04-29T06:29:34.6052588Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+tests	Post Check out repository	2026-04-29T06:29:34.6282184Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+tests	Post Check out repository	2026-04-29T06:29:34.6315775Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+tests	Complete job	﻿2026-04-29T06:29:34.6710485Z Cleaning up orphan processes
+tests	Complete job	2026-04-29T06:29:34.7008404Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
