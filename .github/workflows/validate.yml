@@ -24,6 +24,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
       - name: HACS validation
-        uses: hacs/action@6.2.2
+        uses: hacs/action@main
         with:
           category: integration

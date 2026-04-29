@@ -2,7 +2,7 @@
   "domain": "zurichsee_ha",
   "name": "Zürichsee Wetterstationen",
   "codeowners": [
-    "@marcus"
+    "@derliebemarcus"
   ],
   "config_flow": true,
   "dependencies": [],
