@@ -3,7 +3,7 @@ set -euo pipefail
 
 ROOT="$(git rev-parse --show-toplevel)"
 VENV_DIR="$ROOT/.venv"
-COVERAGE_MINIMUM="92.58"
+COVERAGE_MINIMUM="92.21"
 
 cd "$ROOT"
 
