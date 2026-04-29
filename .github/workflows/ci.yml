@@ -23,12 +23,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          # Forced Exception: Install pytest 9.0.3 first
-          python -m pip install pytest==9.0.3
-          # Install the testing plugin WITHOUT dependencies to bypass the 9.0.0 pin
+          # Step 1: Enforce security-mandated pytest version via constraints
+          python -m pip install -c constraints.txt pytest
+          # Step 2: Install testing plugin WITHOUT dependencies to bypass its strict pytest pin
           python -m pip install --no-deps pytest-homeassistant-custom-component
-          # Install remaining requirements, ignoring the pytest conflict
-          python -m pip install -r requirements-dev.txt --ignore-installed pytest
+          # Step 3: Install remaining requirements, respecting constraints and ignoring pytest reinstall
+          python -m pip install -r requirements-dev.txt -c constraints.txt --ignore-installed pytest
           # Verify correct version is active
           pytest --version | grep "9.0.3"
       - name: Run Ruff lint
@@ -53,12 +53,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          # Forced Exception: Install pytest 9.0.3 first
-          python -m pip install pytest==9.0.3
-          # Install the testing plugin WITHOUT dependencies to bypass the 9.0.0 pin
+          # Step 1: Enforce security-mandated pytest version via constraints
+          python -m pip install -c constraints.txt pytest
+          # Step 2: Install testing plugin WITHOUT dependencies to bypass its strict pytest pin
           python -m pip install --no-deps pytest-homeassistant-custom-component
-          # Install remaining requirements, ignoring the pytest conflict
-          python -m pip install -r requirements-dev.txt --ignore-installed pytest
+          # Step 3: Install remaining requirements, respecting constraints and ignoring pytest reinstall
+          python -m pip install -r requirements-dev.txt -c constraints.txt --ignore-installed pytest
           # Verify correct version is active
           pytest --version | grep "9.0.3"
       - name: Run tests with coverage
