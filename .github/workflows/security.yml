@@ -21,7 +21,7 @@ jobs:
       - name: Install dependencies
         run: pip install pip-audit
       - name: Run pip-audit
-        run: pip-audit -r requirements.txt --ignore-vuln CVE-2026-34073 --ignore-vuln CVE-2026-39892 --ignore-vuln CVE-2026-25990 --ignore-vuln CVE-2026-40192 --ignore-vuln CVE-2026-32597 --ignore-vuln CVE-2026-27448 --ignore-vuln CVE-2026-27459 --ignore-vuln CVE-2026-25645 --ignore-vuln GHSA-pjjw-68hj-v9mw --ignore-vuln CVE-2026-34513 --ignore-vuln CVE-2026-34516 --ignore-vuln CVE-2026-34517 --ignore-vuln CVE-2026-34519 --ignore-vuln CVE-2026-34518 --ignore-vuln CVE-2026-34520 --ignore-vuln CVE-2026-34525 --ignore-vuln CVE-2026-22815 --ignore-vuln CVE-2026-34514 --ignore-vuln CVE-2025-67221
+        run: pip-audit -r requirements.txt --ignore-vuln CVE-2026-34073 --ignore-vuln CVE-2026-39892 --ignore-vuln CVE-2026-25990 --ignore-vuln CVE-2026-40192 --ignore-vuln CVE-2026-32597 --ignore-vuln CVE-2026-27448 --ignore-vuln CVE-2026-27459 --ignore-vuln CVE-2026-25645 --ignore-vuln GHSA-pjjw-68hj-v9mw --ignore-vuln CVE-2026-22815 --ignore-vuln CVE-2025-67221
 
   osv-scan:
     runs-on: ubuntu-latest
