@@ -126,12 +126,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: coverage-report
-          format: cobertura
           path: coverage.xml
 
       - name: Upload coverage to Coveralls
         uses: coverallsapp/github-action@v2
         with:
+          format: cobertura
           file: coverage.xml
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
