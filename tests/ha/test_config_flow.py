@@ -26,7 +26,7 @@ async def test_user_flow(hass: HomeAssistant) -> None:
     ) as mock_setup_entry:
         result = await hass.config_entries.flow.async_configure(
             result["flow_id"],
-            {"stations": ["mythenquai"], "update_interval": 1800},
+            {"stations": ["mythenquai"], "update_interval": "1800"},
         )
         await hass.async_block_till_done()
 
