@@ -12,7 +12,13 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.config_entries import ConfigEntry
-from homeassistant.const import PERCENTAGE, UnitOfPressure, UnitOfSpeed, UnitOfTemperature
+from homeassistant.const import (
+    PERCENTAGE,
+    UnitOfLength,
+    UnitOfPressure,
+    UnitOfSpeed,
+    UnitOfTemperature,
+)
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
 from homeassistant.helpers.typing import StateType
@@ -77,6 +83,14 @@ SENSOR_DESCRIPTIONS: tuple[ZurichseeSensorEntityDescription, ...] = (
         suggested_display_precision=0,
     ),
     ZurichseeSensorEntityDescription(
+        key="windchill",
+        translation_key="windchill",
+        device_class=SensorDeviceClass.TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        suggested_display_precision=1,
+    ),
+    ZurichseeSensorEntityDescription(
         key="humidity",
         translation_key="humidity",
         device_class=SensorDeviceClass.HUMIDITY,
@@ -101,32 +115,12 @@ SENSOR_DESCRIPTIONS: tuple[ZurichseeSensorEntityDescription, ...] = (
         suggested_display_precision=1,
     ),
     ZurichseeSensorEntityDescription(
-        key="barometric_pressure_qff",
-        translation_key="barometric_pressure_qff",
-        device_class=SensorDeviceClass.ATMOSPHERIC_PRESSURE,
-        state_class=SensorStateClass.MEASUREMENT,
-        native_unit_of_measurement=UnitOfPressure.HPA,
-        suggested_display_precision=1,
-    ),
-    ZurichseeSensorEntityDescription(
-        key="barometric_pressure_qnh",
-        translation_key="barometric_pressure_qnh",
-        device_class=SensorDeviceClass.ATMOSPHERIC_PRESSURE,
-        state_class=SensorStateClass.MEASUREMENT,
-        native_unit_of_measurement=UnitOfPressure.HPA,
-        suggested_display_precision=1,
-    ),
-    ZurichseeSensorEntityDescription(
-        key="precipitation_mm",
-        translation_key="precipitation_mm",
+        key="precipitation",
+        translation_key="precipitation",
         device_class=SensorDeviceClass.PRECIPITATION,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement="mm",
         suggested_display_precision=1,
-    ),
-    ZurichseeSensorEntityDescription(
-        key="precipitation_type",
-        translation_key="precipitation_type",
     ),
     ZurichseeSensorEntityDescription(
         key="global_radiation",
@@ -135,6 +129,14 @@ SENSOR_DESCRIPTIONS: tuple[ZurichseeSensorEntityDescription, ...] = (
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement="W/m²",
         suggested_display_precision=1,
+    ),
+    ZurichseeSensorEntityDescription(
+        key="water_level",
+        translation_key="water_level",
+        device_class=SensorDeviceClass.DISTANCE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfLength.METERS,
+        suggested_display_precision=2,
     ),
     ZurichseeSensorEntityDescription(
         key="timestamp_cet",

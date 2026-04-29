@@ -39,6 +39,9 @@ files = [
   "tests",
   "tools"
 ]
+mypy_path = "."
+explicit_package_bases = true
+namespace_packages = true
 exclude = "(^mutants/|^default/|\\.venv)"
 strict = true
 

@@ -5,42 +5,46 @@ from __future__ import annotations
 from datetime import datetime
 from typing import Any
 
-from pydantic import BaseModel, Field, field_validator
+from pydantic import BaseModel, Field
 
 
-class MeasurementValues(BaseModel):
-    """Measurements for a single station."""
+class ValueEntry(BaseModel):
+    """A single value entry with unit and status."""
 
-    air_temperature: float | None = Field(default=None)
-    water_temperature: float | None = Field(default=None)
-    wind_direction: float | None = Field(default=None)
-    wind_force_avg_10min: float | None = Field(default=None)
-    wind_gust_max_10min: float | None = Field(default=None)
-    wind_speed_avg_10min: float | None = Field(default=None)
-    barometric_pressure_qfe: float | None = Field(default=None)
-    barometric_pressure_qff: float | None = Field(default=None)
-    barometric_pressure_qnh: float | None = Field(default=None)
-    dew_point: float | None = Field(default=None)
-    humidity: float | None = Field(default=None)
-    precipitation_mm: float | None = Field(default=None)
-    precipitation_type: str | None = Field(default=None)
-    global_radiation: float | None = Field(default=None)
-    timestamp_cet: datetime | None = Field(default=None)
+    value: Any = Field(default=None)
+    unit: str = Field(default="")
+    status: str = Field(default="")
 
-    @field_validator("timestamp_cet", mode="before")
-    @classmethod
-    def parse_timestamp(cls, value: Any) -> datetime | None:
-        """Parse timestamp from string if needed."""
-        if isinstance(value, str):
-            try:
-                return datetime.fromisoformat(value.replace("Z", "+00:00"))
-            except ValueError:
-                return None
-        return value
+
+class MeasurementEntry(BaseModel):
+    """A single measurement entry for a station."""
+
+    station: str
+    timestamp: datetime
+    values: dict[str, ValueEntry] = Field(default_factory=dict)
 
 
 class MeasurementResponse(BaseModel):
     """API response envelope."""
 
     ok: bool = Field(default=True)
-    result: list[MeasurementValues] = Field(default_factory=list)
+    result: list[MeasurementEntry] = Field(default_factory=list)
+
+
+class MeasurementData(BaseModel):
+    """Flattened measurement data for the integration."""
+
+    air_temperature: float | None = None
+    water_temperature: float | None = None
+    wind_direction: float | None = None
+    wind_force_avg_10min: float | None = None
+    wind_gust_max_10min: float | None = None
+    wind_speed_avg_10min: float | None = None
+    windchill: float | None = None
+    barometric_pressure_qfe: float | None = None
+    dew_point: float | None = None
+    humidity: float | None = None
+    precipitation: float | None = None
+    global_radiation: float | None = None
+    water_level: float | None = None
+    timestamp_cet: datetime | None = None

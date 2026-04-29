@@ -6,7 +6,7 @@
         "description": "Konfiguriere die Wetterstationen am Zürichsee.",
         "data": {
           "stations": "Stationen",
-          "update_interval": "Aktualisierungsintervall"
+          "update_interval": "Update-Intervall"
         }
       }
     },
@@ -20,7 +20,7 @@
         "title": "Optionen",
         "data": {
           "stations": "Stationen",
-          "update_interval": "Aktualisierungsintervall"
+          "update_interval": "Update-Intervall"
         }
       }
     }
@@ -34,16 +34,19 @@
         "name": "Wassertemperatur"
       },
       "wind_speed_avg_10min": {
-        "name": "Windgeschwindigkeit (10 Min. Mittel)"
+        "name": "Windgeschwindigkeit (10 min Durchschnitt)"
       },
       "wind_gust_max_10min": {
-        "name": "Windböe (10 Min. Maximum)"
+        "name": "Windböe (10 min Maximum)"
       },
       "wind_direction": {
         "name": "Windrichtung"
       },
       "wind_force_avg_10min": {
-        "name": "Windstärke (10 Min. Mittel)"
+        "name": "Windstärke (10 min Durchschnitt)"
+      },
+      "windchill": {
+        "name": "Windchill"
       },
       "humidity": {
         "name": "Luftfeuchtigkeit"
@@ -54,20 +57,14 @@
       "barometric_pressure_qfe": {
         "name": "Luftdruck (QFE)"
       },
-      "barometric_pressure_qff": {
-        "name": "Luftdruck (QFF)"
-      },
-      "barometric_pressure_qnh": {
-        "name": "Luftdruck (QNH)"
-      },
-      "precipitation_mm": {
+      "precipitation": {
         "name": "Niederschlag"
-      },
-      "precipitation_type": {
-        "name": "Niederschlagstyp"
       },
       "global_radiation": {
         "name": "Globalstrahlung"
+      },
+      "water_level": {
+        "name": "Wasserstand"
       },
       "timestamp_cet": {
         "name": "Letzte Aktualisierung"

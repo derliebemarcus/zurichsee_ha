@@ -10,12 +10,12 @@ from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, Upda
 
 from .api import ZurichseeApiClient
 from .exceptions import ZurichseeApiError
-from .models import MeasurementValues
+from .models import MeasurementData
 
 LOGGER = logging.getLogger(__name__)
 
 
-class ZurichseeCoordinator(DataUpdateCoordinator[dict[str, MeasurementValues]]):
+class ZurichseeCoordinator(DataUpdateCoordinator[dict[str, MeasurementData]]):
     """Class to manage fetching Zurichsee data."""
 
     def __init__(
@@ -36,9 +36,9 @@ class ZurichseeCoordinator(DataUpdateCoordinator[dict[str, MeasurementValues]]):
             update_interval=timedelta(seconds=update_interval),
         )
 
-    async def _async_update_data(self) -> dict[str, MeasurementValues]:
+    async def _async_update_data(self) -> dict[str, MeasurementData]:
         """Update data via library."""
-        data: dict[str, MeasurementValues] = {}
+        data: dict[str, MeasurementData] = {}
         for station in self._stations:
             try:
                 result = await self._api.async_get_measurements(station)

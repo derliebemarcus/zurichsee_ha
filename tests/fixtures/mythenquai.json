@@ -1,22 +1,83 @@
 {
   "ok": true,
+  "total_count": 1,
+  "row_count": 1,
   "result": [
     {
-      "air_temperature": 12.5,
-      "water_temperature": 11.2,
-      "wind_direction": 240,
-      "wind_force_avg_10min": 3,
-      "wind_gust_max_10min": 5.2,
-      "wind_speed_avg_10min": 3.1,
-      "barometric_pressure_qfe": 1013.2,
-      "barometric_pressure_qff": 1013.5,
-      "barometric_pressure_qnh": 1013.8,
-      "dew_point": 8.4,
-      "humidity": 75,
-      "precipitation_mm": 0.0,
-      "precipitation_type": "none",
-      "global_radiation": 120.5,
-      "timestamp_cet": "2024-04-29T06:00:00+02:00"
+      "station": "mythenquai",
+      "timestamp": "2026-04-29T03:20:00.000Z",
+      "values": {
+        "timestamp_cet": {
+          "value": "2026-04-29T05:20:00+02:00",
+          "unit": "",
+          "status": "ok"
+        },
+        "air_temperature": {
+          "value": 12.5,
+          "unit": "°C",
+          "status": "ok"
+        },
+        "water_temperature": {
+          "value": 11.2,
+          "unit": "°C",
+          "status": "ok"
+        },
+        "wind_gust_max_10min": {
+          "value": 1.6,
+          "unit": "m/s",
+          "status": "ok"
+        },
+        "wind_speed_avg_10min": {
+          "value": 1.1,
+          "unit": "m/s",
+          "status": "ok"
+        },
+        "wind_force_avg_10min": {
+          "value": 1.1,
+          "unit": "bft",
+          "status": "ok"
+        },
+        "wind_direction": {
+          "value": 240,
+          "unit": "°",
+          "status": "ok"
+        },
+        "windchill": {
+          "value": 12.5,
+          "unit": "°C",
+          "status": "ok"
+        },
+        "barometric_pressure_qfe": {
+          "value": 970.6,
+          "unit": "hPa",
+          "status": "ok"
+        },
+        "precipitation": {
+          "value": 0,
+          "unit": "mm",
+          "status": "ok"
+        },
+        "dew_point": {
+          "value": 11.4,
+          "unit": "°C",
+          "status": "ok"
+        },
+        "global_radiation": {
+          "value": 0,
+          "unit": "W/m²",
+          "status": "ok"
+        },
+        "humidity": {
+          "value": 91,
+          "unit": "%",
+          "status": "ok"
+        },
+        "water_level": {
+          "value": 405.96,
+          "unit": "m",
+          "status": "ok"
+        }
+      }
     }
   ]
 }

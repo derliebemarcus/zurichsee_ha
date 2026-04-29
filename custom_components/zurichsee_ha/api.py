@@ -3,13 +3,15 @@
 from __future__ import annotations
 
 import logging
+from datetime import datetime
+from typing import Any
 
 import aiohttp
 from yarl import URL
 
 from .const import API_BASE_URL
 from .exceptions import ZurichseeApiError
-from .models import MeasurementResponse, MeasurementValues
+from .models import MeasurementData, MeasurementResponse
 
 LOGGER = logging.getLogger(__name__)
 
@@ -22,7 +24,7 @@ class ZurichseeApiClient:
         self._session = session
         self._base_url = URL(API_BASE_URL)
 
-    async def async_get_measurements(self, station: str) -> MeasurementValues | None:
+    async def async_get_measurements(self, station: str) -> MeasurementData | None:
         """Fetch the latest measurement for a specific station."""
         url = self._base_url / "measurements" / station
         params = {
@@ -43,7 +45,39 @@ class ZurichseeApiClient:
                 if not parsed.result:
                     return None
 
-                return parsed.result[0]
+                entry = parsed.result[0]
+                values = entry.values
+
+                # Flatten the values
+                result = MeasurementData()
+
+                # Helper to get value from ValueEntry
+                def get_val(key: str) -> Any:
+                    if key not in values:
+                        return None
+                    return values[key].value
+
+                result.air_temperature = get_val("air_temperature")
+                result.water_temperature = get_val("water_temperature")
+                result.wind_direction = get_val("wind_direction")
+                result.wind_force_avg_10min = get_val("wind_force_avg_10min")
+                result.wind_gust_max_10min = get_val("wind_gust_max_10min")
+                result.wind_speed_avg_10min = get_val("wind_speed_avg_10min")
+                result.windchill = get_val("windchill")
+                result.barometric_pressure_qfe = get_val("barometric_pressure_qfe")
+                result.dew_point = get_val("dew_point")
+                result.humidity = get_val("humidity")
+                result.precipitation = get_val("precipitation")
+                result.global_radiation = get_val("global_radiation")
+                result.water_level = get_val("water_level")
+
+                ts_cet = get_val("timestamp_cet")
+                if isinstance(ts_cet, str):
+                    result.timestamp_cet = datetime.fromisoformat(ts_cet)
+                elif isinstance(ts_cet, datetime):
+                    result.timestamp_cet = ts_cet
+
+                return result
 
         except TimeoutError as err:
             raise ZurichseeApiError(f"Timeout fetching data from {station}") from err

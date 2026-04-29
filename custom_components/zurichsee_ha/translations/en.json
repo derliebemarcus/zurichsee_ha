@@ -2,7 +2,7 @@
   "config": {
     "step": {
       "user": {
-        "title": "Zürichsee Weather Stations",
+        "title": "Zürichsee Wetterstationen",
         "description": "Configure the weather stations at Lake Zurich.",
         "data": {
           "stations": "Stations",
@@ -45,6 +45,9 @@
       "wind_force_avg_10min": {
         "name": "Wind force (10 min avg)"
       },
+      "windchill": {
+        "name": "Windchill"
+      },
       "humidity": {
         "name": "Humidity"
       },
@@ -54,20 +57,14 @@
       "barometric_pressure_qfe": {
         "name": "Barometric pressure (QFE)"
       },
-      "barometric_pressure_qff": {
-        "name": "Barometric pressure (QFF)"
-      },
-      "barometric_pressure_qnh": {
-        "name": "Barometric pressure (QNH)"
-      },
-      "precipitation_mm": {
+      "precipitation": {
         "name": "Precipitation"
-      },
-      "precipitation_type": {
-        "name": "Precipitation type"
       },
       "global_radiation": {
         "name": "Global radiation"
+      },
+      "water_level": {
+        "name": "Water level"
       },
       "timestamp_cet": {
         "name": "Last update"

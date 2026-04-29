@@ -19,13 +19,18 @@ async def test_sensors(hass: HomeAssistant) -> None:
     # Mock the API client return value
     with patch(
         "custom_components.zurichsee_ha.api.ZurichseeApiClient.async_get_measurements",
-        return_value=None,  # Will be set below
     ) as mock_get:
-        # We need to mock the response for both stations if configured
-        # But for this test we only use mythenquai
-        from custom_components.zurichsee_ha.models import MeasurementValues
+        from datetime import datetime
 
-        mock_get.return_value = MeasurementValues.model_validate(mock_data["result"][0])
+        from custom_components.zurichsee_ha.models import MeasurementData
+
+        # Create a mock data object that matches what the client returns
+        vals = mock_data["result"][0]["values"]
+        mock_get.return_value = MeasurementData(
+            air_temperature=vals["air_temperature"]["value"],
+            water_temperature=vals["water_temperature"]["value"],
+            timestamp_cet=datetime.fromisoformat(vals["timestamp_cet"]["value"]),
+        )
 
         entry = MockConfigEntry(
             domain=DOMAIN,
