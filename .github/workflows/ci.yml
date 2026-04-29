@@ -23,10 +23,10 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          # Install dev requirements. We use --ignore-installed for pytest 
-          # to resolve the conflict with pytest-homeassistant-custom-component (pins 9.0.0)
-          # while satisfying security scanners that check requirements-dev.txt
-          python -m pip install -r requirements-dev.txt --ignore-installed pytest==9.0.3 || true
+          # Install pytest 9.0.3 first to ensure it takes precedence
+          python -m pip install pytest==9.0.3
+          # Install other requirements, allowing conflict with pytest-homeassistant-custom-component
+          python -m pip install -r requirements-dev.txt --ignore-installed pytest==9.0.3
           # Verify the installation
           pytest --version | grep "9.0.3"
       - name: Run Ruff lint
@@ -51,7 +51,12 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip setuptools wheel
-          python -m pip install -r requirements-dev.txt
+          # Install pytest 9.0.3 first to ensure it takes precedence
+          python -m pip install pytest==9.0.3
+          # Install other requirements, allowing conflict with pytest-homeassistant-custom-component
+          python -m pip install -r requirements-dev.txt --ignore-installed pytest==9.0.3
+          # Verify the installation
+          pytest --version | grep "9.0.3"
       - name: Run tests with coverage
         run: |
           python -m pytest \
