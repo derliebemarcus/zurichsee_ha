@@ -41,7 +41,7 @@ jobs:
         run: python tools/check_commit_messages.py "${{ steps.range.outputs.range }}"
 
       - name: Validate release notes
-        run: python tools/check_release_notes.py custom_components/teltonika_rms/manifest.json CHANGELOG.md
+        run: python tools/check_release_notes.py custom_components/zurichsee_ha/manifest.json CHANGELOG.md
 
   static-analysis:
     runs-on: [self-hosted, linux, X64]
@@ -142,9 +142,9 @@ jobs:
           SONAR_HOST_URL: https://sonarqube.home.siczb.de
         with:
           args: >
-            -Dsonar.projectKey=teltonika_rms
+            -Dsonar.projectKey=zurichsee_ha
             -Dsonar.python.version=3.14
-            -Dsonar.sources=custom_components/teltonika_rms
+            -Dsonar.sources=custom_components/zurichsee_ha
             -Dsonar.tests=tests
             -Dsonar.python.coverage.reportPaths=coverage.xml
 
