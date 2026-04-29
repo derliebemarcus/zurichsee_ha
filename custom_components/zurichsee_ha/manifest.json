@@ -18,6 +18,5 @@
     "aiohttp>=3.13.5",
     "pydantic>=2.12.2"
   ],
-  "homeassistant": ">=2026.4.4",
   "version": "0.1.1"
 }
