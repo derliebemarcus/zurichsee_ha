@@ -2,8 +2,14 @@ name: Publish Release
 
 on:
   push:
-    branches: [main]
+    tags:
+      - "v*"
   workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing version tag to publish or repair
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -11,13 +17,70 @@ permissions:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Check out repository
+      - name: Resolve tag
+        id: tag
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+            TAG="${{ inputs.tag }}"
+          else
+            TAG="${GITHUB_REF_NAME}"
+          fi
+
+          [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]] || {
+            echo "Invalid release tag: $TAG"
+            exit 1
+          }
+
+          echo "tag=$TAG" >> "$GITHUB_OUTPUT"
+
+      - name: Check out release tag
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
+          ref: ${{ steps.tag.outputs.tag }}
 
-      - name: Finalize v0.1.5
+      - name: Verify manifest version
+        shell: bash
+        run: |
+          VERSION="$(python3 -c '
+          import json
+          from pathlib import Path
+          print(json.loads(
+              Path("custom_components/zurichsee_ha/manifest.json")
+              .read_text(encoding="utf-8")
+          )["version"])
+          ')"
+
+          test "v$VERSION" = "${{ steps.tag.outputs.tag }}" || {
+            echo "Tag ${{ steps.tag.outputs.tag }} does not match manifest version $VERSION"
+            exit 1
+          }
+
+      - name: Extract release notes
+        run: |
+          python3 tools/extract_release_notes.py \
+            custom_components/zurichsee_ha/manifest.json \
+            CHANGELOG.md \
+            release_notes.md
+
+      - name: Create or update release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash tools/finalize_v015.sh
+        shell: bash
+        run: |
+          TAG="${{ steps.tag.outputs.tag }}"
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release edit "$TAG" \
+              --title "Release $TAG" \
+              --notes-file release_notes.md \
+              --latest
+          else
+            gh release create "$TAG" \
+              --title "Release $TAG" \
+              --notes-file release_notes.md \
+              --latest
+          fi
