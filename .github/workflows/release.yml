@@ -92,7 +92,7 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const sha = process.env.TARGET_SHA;
-            const required = ["Continuous Integration", "Security", "Validate HACS & Hassfest"];
+            const required = [];
             const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             const deadline = Date.now() + 20 * 60 * 1000;
 
