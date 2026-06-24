@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.5] - 2026-06-24
+
+### Changed
+- Prepared a stable release for submission to the default HACS store.
+- Updated repository links after the repository rename.
+- Enabled complete HACS validation without ignored checks.
+
+### Fixed
+- Corrected the integration brand image files to use actual PNG encoding.
+
 ## [0.1.4] - 2026-04-29
 
 ### Added
