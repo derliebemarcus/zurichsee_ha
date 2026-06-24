@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.7] - 2026-06-25
+
+### Added
+
+- Added Switzerland as the integration country in the HACS manifest.
+
+### Changed
+
+- Updated HACS metadata for submission to the default repository.
+
+### Fixed
+
+- Added the country metadata required for geographically limited HACS integrations.
+
 ## [0.1.6] - 2026-06-24
 
 ### Added
