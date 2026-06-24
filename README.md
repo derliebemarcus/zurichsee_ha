@@ -1,15 +1,15 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/derliebemarcus/homeassistant_zurichsee_ha/refs/heads/main/custom_components/zurichsee_ha/brand/logo.png" alt="Zürichsee Wetterstationen Logo" width="200">
+  <img src="https://raw.githubusercontent.com/derliebemarcus/homeassistant_zurichsee/refs/heads/main/custom_components/zurichsee_ha/brand/logo.png" alt="Zürichsee Wetterstationen Logo" width="200">
 </p>
 
 # Zürichsee Wetterstationen for Home Assistant
 
-[![GitHub Release](https://img.shields.io/github/v/release/derliebemarcus/homeassistant_zurichsee_ha)](https://github.com/derliebemarcus/homeassistant_zurichsee_ha/releases)
-[![CI](https://github.com/derliebemarcus/homeassistant_zurichsee_ha/actions/workflows/ci.yml/badge.svg)](https://github.com/derliebemarcus/homeassistant_zurichsee_ha/actions/workflows/ci.yml)
-[![License](https://img.shields.io/github/license/derliebemarcus/homeassistant_zurichsee_ha)](LICENSE)
+[![GitHub Release](https://img.shields.io/github/v/release/derliebemarcus/homeassistant_zurichsee)](https://github.com/derliebemarcus/homeassistant_zurichsee/releases)
+[![CI](https://github.com/derliebemarcus/homeassistant_zurichsee/actions/workflows/ci.yml/badge.svg)](https://github.com/derliebemarcus/homeassistant_zurichsee/actions/workflows/ci.yml)
+[![License](https://img.shields.io/github/license/derliebemarcus/homeassistant_zurichsee)](LICENSE)
 [![HACS](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
-[![Coverage Status](https://img.shields.io/coverallsCoverage/github/derliebemarcus/homeassistant_zurichsee_ha?branch=main&style=for-the-badge)](https://coveralls.io/github/derliebemarcus/homeassistant_zurichsee_ha)
-[![Validate HACS & Hassfest](https://github.com/derliebemarcus/homeassistant_zurichsee_ha/actions/workflows/validate.yml/badge.svg)](https://github.com/derliebemarcus/homeassistant_zurichsee_ha/actions/workflows/validate.yml)
+[![Coverage Status](https://img.shields.io/coverallsCoverage/github/derliebemarcus/homeassistant_zurichsee?branch=main&style=for-the-badge)](https://coveralls.io/github/derliebemarcus/homeassistant_zurichsee)
+[![Validate HACS & Hassfest](https://github.com/derliebemarcus/homeassistant_zurichsee/actions/workflows/validate.yml/badge.svg)](https://github.com/derliebemarcus/homeassistant_zurichsee/actions/workflows/validate.yml)
 
 Home Assistant custom integration for weather stations of the Wasserschutzpolizei Zurich (tecdottir API).
 
@@ -33,7 +33,7 @@ Home Assistant custom integration for weather stations of the Wasserschutzpolize
 
 1. Open HACS in your Home Assistant instance.
 2. Go to **Integrations** -> **Three dots menu** -> **Custom repositories**.
-3. Add `https://github.com/derliebemarcus/homeassistant_zurichsee_ha` with category `Integration`.
+3. Add `https://github.com/derliebemarcus/homeassistant_zurichsee` with category `Integration`.
 4. Search for "Zürichsee Wetterstationen" and click **Install**.
 5. Restart Home Assistant.
 
