@@ -2,6 +2,8 @@ name: Publish Release
 
 on:
   push:
+    branches:
+      - main
     tags:
       - "v*"
   workflow_dispatch:
@@ -28,12 +30,20 @@ jobs:
       PYENV_VERSION: "3.14"
 
     steps:
+      - name: Check out source revision
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
       - name: Resolve target tag
         id: tag
         shell: bash
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             TAG="${{ github.event.inputs.tag }}"
+          elif [ "${{ github.ref_type }}" = "branch" ]; then
+            VERSION="$(python3 -c 'import json; from pathlib import Path; print(json.loads(Path("custom_components/zurichsee_ha/manifest.json").read_text(encoding="utf-8"))["version"])')"
+            TAG="v$VERSION"
           else
             TAG="${GITHUB_REF_NAME}"
           fi
@@ -45,11 +55,27 @@ jobs:
 
           echo "tag=$TAG" >> "$GITHUB_OUTPUT"
 
+      - name: Create tag for main-branch release
+        if: github.ref_type == 'branch'
+        shell: bash
+        run: |
+          set -euo pipefail
+          TAG="${{ steps.tag.outputs.tag }}"
+          if git rev-parse "$TAG" >/dev/null 2>&1; then
+            echo "Tag $TAG already exists."
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag "$TAG" "$GITHUB_SHA"
+          git push origin "refs/tags/$TAG"
+
       - name: Check out tagged revision
         uses: actions/checkout@v6
         with:
           fetch-depth: 0
           ref: ${{ steps.tag.outputs.tag }}
+
       - name: Resolve target commit
         id: target
         shell: bash
@@ -93,9 +119,7 @@ jobs:
                 return run && run.status === "completed" && run.conclusion !== "success";
               });
 
-              core.info(
-                `Waiting for checks on ${sha}: missing=[${missing.join(", ")}] pending=[${pending.join(", ")}] failed=[${failed.join(", ")}]`,
-              );
+              core.info(`Waiting for checks on ${sha}: missing=[${missing.join(", ")}] pending=[${pending.join(", ")}] failed=[${failed.join(", ")}]`);
 
               if (failed.length > 0) {
                 core.setFailed(`Required checks failed for ${sha}: ${failed.join(", ")}`);
@@ -118,9 +142,7 @@ jobs:
       - name: Verify tag matches manifest version
         shell: bash
         run: |
-          VERSION="$(
-            python3 -c 'import json, sys; from pathlib import Path; print(str(json.loads(Path(sys.argv[1]).read_text(encoding="utf-8")).get("version", "")).strip())' custom_components/zurichsee_ha/manifest.json
-          )"
+          VERSION="$(python3 -c 'import json, sys; from pathlib import Path; print(str(json.loads(Path(sys.argv[1]).read_text(encoding="utf-8")).get("version", "")).strip())' custom_components/zurichsee_ha/manifest.json)"
           TAG="${{ steps.tag.outputs.tag }}"
 
           if [ "v$VERSION" != "$TAG" ]; then
@@ -142,17 +164,11 @@ jobs:
             const repo = context.repo.repo;
             const tag = "${{ steps.tag.outputs.tag }}";
             const body = fs.readFileSync("release_notes.md", "utf8");
-
             const isPrerelease = tag.includes("-beta");
             const makeLatest = isPrerelease ? "false" : "true";
 
             try {
-              const existing = await github.rest.repos.getReleaseByTag({
-                owner,
-                repo,
-                tag,
-              });
-
+              const existing = await github.rest.repos.getReleaseByTag({ owner, repo, tag });
               await github.rest.repos.updateRelease({
                 owner,
                 repo,
@@ -165,10 +181,7 @@ jobs:
               });
               core.info(`Updated release ${tag}.`);
             } catch (error) {
-              if (error.status !== 404) {
-                throw error;
-              }
-
+              if (error.status !== 404) throw error;
               await github.rest.repos.createRelease({
                 owner,
                 repo,
@@ -191,7 +204,7 @@ jobs:
           else
             FLOATING_TAG="stable"
           fi
-          
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git tag -f "$FLOATING_TAG" "$SHA"
