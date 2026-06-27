@@ -1,25 +1,27 @@
 #!/usr/bin/env python3
-"""Validate changelog release-note headings for the current manifest version."""
+"""Validate changelog release notes for the current manifest version."""
 
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
 
-REQUIRED_HEADINGS = (
-    "### Added",
-    "### Changed",
-    "### Fixed",
-)
+
+def is_version_heading(line: str, version: str) -> bool:
+    """Return whether a Markdown heading starts a release for version."""
+    escaped = re.escape(version)
+    pattern = rf"^##\s+(?:\[{escaped}\](?:\([^)]*\))?|{escaped})(?:\s|$)"
+    return re.match(pattern, line) is not None
 
 
 def extract_section(changelog: str, version: str) -> str:
-    lines = changelog.splitlines()
+    """Extract old-style or Release Please notes for version."""
     capture = False
     collected: list[str] = []
-    for line in lines:
-        if line.startswith(f"## [{version}] - "):
+    for line in changelog.splitlines():
+        if is_version_heading(line, version):
             capture = True
             continue
         if capture and line.startswith("## "):
@@ -30,6 +32,7 @@ def extract_section(changelog: str, version: str) -> str:
 
 
 def main() -> int:
+    """Validate that the manifest version has non-empty release notes."""
     manifest_path = (
         Path(sys.argv[1])
         if len(sys.argv) > 1
@@ -47,14 +50,7 @@ def main() -> int:
     version = str(json.loads(manifest_path.read_text(encoding="utf-8"))["version"]).strip()
     section = extract_section(changelog_path.read_text(encoding="utf-8"), version)
     if not section:
-        print(f"Missing changelog section for version {version}")
-        return 1
-
-    # We only check if at least one of the standard headings is present or some content
-    if not any(heading in section for heading in REQUIRED_HEADINGS) and len(section) < 10:
-        print(
-            f"Version {version} is missing standard release-note headings: {', '.join(REQUIRED_HEADINGS)}"
-        )
+        print(f"Missing or empty changelog section for version {version}")
         return 1
     return 0
 
