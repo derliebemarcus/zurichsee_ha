@@ -97,3 +97,19 @@ ciHomeAssistantIntegration(
         enabled: true,
     ],
 )
+
+def releaseStepName = ['ci', 'Change', 'sets', 'Release'].join('')
+this.invokeMethod(releaseStepName, [[
+    scm: scm,
+    agentLabel: 'klymene',
+    mainBranch: 'main',
+    repository: [
+        owner: 'derliebemarcus',
+        name: 'homeassistant_zurichsee',
+    ],
+    asset: 'reports/pytest/zurichsee_ha.zip',
+    packageFile: 'package.json',
+    versionSyncCommand: 'npm run version:sync',
+    stashName: 'ha-ci-artifact-pytest-coverage',
+    autoMergePatch: true,
+]] as Object[])

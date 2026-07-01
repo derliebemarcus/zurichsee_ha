@@ -1,0 +1,13 @@
+{
+  "name": "homeassistant_zurichsee",
+  "version": "0.1.8",
+  "private": true,
+  "description": "Home Assistant custom integration for Zurichsee data.",
+  "scripts": {
+    "version:sync": "node scripts/sync-version.mjs"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "license": "MIT"
+}

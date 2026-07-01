@@ -16,6 +16,9 @@ case "$task" in
             --cov-report="xml:$report_root/pytest/coverage.xml"
         "$python" tools/check_coverage_threshold.py \
             "$report_root/pytest/coverage.xml" 97.1
+        "$python" tools/build_release_asset.py \
+            "$report_root/pytest/zurichsee_ha.zip"
+        test -s "$report_root/pytest/zurichsee_ha.zip"
         ;;
     ruff-lint)
         mkdir -p "$report_root/ruff"

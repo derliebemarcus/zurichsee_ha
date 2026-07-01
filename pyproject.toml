@@ -69,5 +69,9 @@ only_mutate = [
   "custom_components/zurichsee_ha/models.py",
 ]
 pytest_add_cli_args_test_selection = ["tests/unit", "tests/ha"]
-pytest_add_cli_args = ["-c", "mutmut-pytest.ini"]
+pytest_add_cli_args = [
+  "-c",
+  "mutmut-pytest.ini",
+  "--ignore=tests/unit/test_release_metadata.py",
+]
 also_copy = ["mutmut-pytest.ini"]
