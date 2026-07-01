@@ -48,6 +48,7 @@ ciHomeAssistantIntegration(
         mutation: 'chmod 700 tools/jenkins_python_tasks.sh && tools/jenkins_python_tasks.sh mutation',
         dependencyConsistency: 'chmod 700 tools/jenkins_python_tasks.sh && tools/jenkins_python_tasks.sh dependency-consistency',
         codeql: 'chmod 700 tools/jenkins_codeql.sh && tools/jenkins_codeql.sh',
+        sonar: 'chmod 700 tools/jenkins_sonar.sh && tools/jenkins_sonar.sh',
     ],
     mutation: [
         artifacts: 'reports/mutation/**,mutants/.mutmut-cache/**,.mutmut-cache',
