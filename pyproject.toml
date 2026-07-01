@@ -62,9 +62,12 @@ module = "voluptuous.*"
 ignore_errors = true
 
 [tool.mutmut]
-also_copy = ["custom_components"]
-paths_to_mutate = [
+source_paths = ["custom_components/"]
+only_mutate = [
   "custom_components/zurichsee_ha/api.py",
   "custom_components/zurichsee_ha/coordinator.py",
   "custom_components/zurichsee_ha/models.py",
 ]
+pytest_add_cli_args_test_selection = ["tests/unit", "tests/ha"]
+pytest_add_cli_args = ["-c", "mutmut-pytest.ini"]
+also_copy = ["mutmut-pytest.ini"]
