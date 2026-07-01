@@ -15,7 +15,12 @@ if [[ -z "$SONAR_TOKEN" ]]; then
     exit 1
 fi
 
-mkdir -p "$report_root/sonar"
+sonar_root="$PWD/$report_root/sonar"
+export SONAR_USER_HOME="$sonar_root/cache"
+sonar_working_directory="$sonar_root/work"
+
+rm -rf "$sonar_working_directory"
+mkdir -p "$SONAR_USER_HOME" "$sonar_working_directory"
 
 "$scanner" \
     -Dsonar.projectKey=zurichsee_ha \
@@ -24,5 +29,6 @@ mkdir -p "$report_root/sonar"
     -Dsonar.python.version=3.14 \
     -Dsonar.sources=custom_components/zurichsee_ha \
     -Dsonar.tests=tests/unit,tests/ha \
+    -Dsonar.working.directory="$sonar_working_directory" \
     -Dsonar.python.coverage.reportPaths="$report_root/pytest/coverage.xml" \
     -Dsonar.python.xunit.reportPath="$report_root/pytest/pytest.xml"
