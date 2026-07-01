@@ -70,4 +70,10 @@ only_mutate = [
 ]
 pytest_add_cli_args_test_selection = ["tests/unit", "tests/ha"]
 pytest_add_cli_args = ["-c", "mutmut-pytest.ini"]
-also_copy = ["mutmut-pytest.ini"]
+also_copy = [
+  "mutmut-pytest.ini",
+  "tools/build_release_asset.py",
+  "package.json",
+  "version.txt",
+  ".changeset/config.json",
+]
