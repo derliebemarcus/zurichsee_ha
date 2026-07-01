@@ -62,11 +62,7 @@ case "$task" in
         ;;
     mutation)
         mkdir -p "$report_root/mutation"
-        "$python" -m pytest \
-            --cov=custom_components/zurichsee_ha \
-            --cov-context=test \
-            --cov-config=.coveragerc \
-            tests/
+        rm -rf mutants
         status=0
         "$python" -m mutmut run \
             > "$report_root/mutation/mutmut.txt" 2>&1 || status=$?
